@@ -1,10 +1,9 @@
- 
+
 
 import { useState } from "react";
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { Navigate } from "react-router-dom";
- 
+
 import { addUserData } from "../../redux/Slice";
 import SideBar from "../formDir/sideBar";
 import PersonalDetails from "../formDir/personalDetails";
@@ -12,20 +11,21 @@ import ProfExp from "../formDir/profExp";
 import EduField from "../formDir/eduField";
 import KeySkills from "../formDir/keySkills";
 import { useNavigate, useSearchParams } from "react-router-dom";
- 
- export default function ResumeDetailFillForm() {
+import ProfileImage from "../formDir/ProfileImage";
+
+export default function ResumeDetailFillForm() {
   const [formCount, setFormCount] = useState(1);
-  const [searchParams,setSearchParams] =useSearchParams()
-  const navigate =useNavigate()
+  const [searchParams, setSearchParams] = useSearchParams()
+  const navigate = useNavigate()
 
   const templateNumber = searchParams.get('template')
- 
+
   const handlePreviewResume = () => {
-  const currentPath = window.location.pathname;
-  const newPath = currentPath.replace('/DetailFill', '');
-  navigate(`${newPath}/${templateNumber}`, { replace: true });
+    const currentPath = window.location.pathname;
+    const newPath = currentPath.replace('/DetailFill', '');
+    navigate(`${newPath}/${templateNumber}`, { replace: true });
   }
-  console.log("+ ++ searchParams from preview detail fill page++++++++++++++++++++++++++++",templateNumber )
+  // console.log("+ ++ searchParams from preview detail fill page++++++++++++++++++++++++++++",templateNumber )
 
   const dispath = useDispatch();
 
@@ -34,7 +34,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
     console.log("handleFormNext", formCount);
   };
 
- 
+
   const handleformPrevious = () => {
     setFormCount(formCount > 1 ? formCount - 1 : formCount);
     console.log("handleformPrevious", formCount);
@@ -42,7 +42,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 
   const form = useForm({
     defaultValues: {
-    
+
       socialMediaLinks: [
         {
           links: "",
@@ -85,35 +85,46 @@ import { useNavigate, useSearchParams } from "react-router-dom";
     control,
     handleSubmit,
     // watch,
-    formState: { errors },
+    formState: { errors, isDirty },
   } = form;
   // const userWatch = watch();
+  //  console.log("+ ++  ++++++++++++++++++++++++++++",templateNumber )
+  //  console.log("+ ++  ++++++++++++++++++++++++++++",   isDirty )
+  //  console.log("+ ++  ++++++++++++++++++++++++++++",   isDirty )
 
- 
-  // const { name, ref, onChange, onBlur } = register("name");
 
-  const formSubmit = (data) => {
+  const { name, ref,  onChange, onBlur } = register("name");
+   const formSubmit = (data) => {
     alert("😲😲Submit request works😲😲");
     console.log("😲 😲from handleSubmit ", data);
     dispath(addUserData(data));
   };
+  //  console.log("+ ++  ++++++++++++++++++++++++++++",   onBlur(()=>console.log("this is onBlur"))  )
+  //  console.log("+ ++  ++++++++++++++++++++++++++++",    )
 
   return (
     <div className="mainFormComponent ">
       <h1>Resume Builder</h1>
+
+
       <div className="row">
         {/* form side bar */}
         <div className="col-sm-3 ">
-           <SideBar  formCount={formCount}/>
+          <SideBar formCount={formCount} />
+
         </div>
+    
+ 
         <div className="col-sm-9 ">
-          <form onSubmit={handleSubmit(formSubmit)} noValidate>
+          <form onSubmit={handleSubmit(formSubmit)} noValidate className="row g-3">
             {/* <h3 key={2}>userWatch---{JSON.stringify(userWatch)}</h3> */}
             {formCount === 1 ? (
               <PersonalDetails
                 register={register}
                 errors={errors}
                 control={control}
+                isDirty={isDirty}
+
               />
             ) : formCount === 2 ? (
               <ProfExp register={register} errors={errors} control={control} />
@@ -128,13 +139,13 @@ import { useNavigate, useSearchParams } from "react-router-dom";
             ) : null}
             {/* <PersonalDetails register={register} errors={errors} control={ control} /> */}
             {formCount === 4 ? (
-            <button type="submit" className="btn btn-danger  my-4" onClick={handlePreviewResume}  disabled={!templateNumber}>
-             Preview
-            </button>
-                   ) : null}
+              <button type="submit" className="btn btn-danger my-4" onClick={handlePreviewResume} disabled={!templateNumber}>
+                Preview
+              </button>
+            ) : null}
           </form>
-     
-          <div className="d-flex justify-content-between">
+
+          <div className="d-flex justify-content-evenly">
             <button
               className="btn btn-warning"
               onClick={handleformPrevious}
@@ -152,6 +163,6 @@ import { useNavigate, useSearchParams } from "react-router-dom";
           </div>
         </div>
       </div>
-     </div>
+    </div>
   );
 }
