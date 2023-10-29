@@ -17,7 +17,7 @@ import { useFieldArray } from 'react-hook-form';
       });
   return (
     <div>
-           <div className="fs-2 fw-bold">Job title</div>
+      
                 <div className="Jobtitle ">
                   <section className="firstFaction">
                     {/* Resume Picture */}
