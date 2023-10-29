@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
     <div>
       <div className="offcanvas offcanvas-start" id="demo">
         <div className="offcanvas-header">
-          <h1 className="offcanvas-title">Heading</h1>
+      <img  className="offcanvas-title mx-5 pt-2 " src={LOGO } alt='Heading Logo'/>
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div className="offcanvas-body">
