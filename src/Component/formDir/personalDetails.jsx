@@ -2,13 +2,14 @@
 
 import AddIcon from '@mui/icons-material/Add';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
- import { useFieldArray } from 'react-hook-form';
- 
-const PersonalDetails = ({ register, errors, control,  }) => {
+import { useFieldArray } from 'react-hook-form';
+import ProfileImage from './ProfileImage';
+
+const PersonalDetails = ({ register, errors, control, getValues }) => {
 
 
-  
-const {
+
+  const {
     fields: socialMediaFields,
     append: appendSocialMedia,
     remove: removeSocialMedia,
@@ -18,78 +19,78 @@ const {
   });
   return (
     <div>
-      <div className="Jobtitle border border-5 border-success">
-        <section className="firstFaction">
-      
-          {/* firstName  */}
-          <div className="row">
-  <div className="col-sm-4">
-    <label className="form-label" htmlFor="firstName">First Name:</label>
-    <input
-      type="text"
-      className="form-control"
-      id="firstName"
-      {...register("firstName", {
-        // ... validation rules
-      })}
-      placeholder="Enter First Name"
-    />
-    <p className="error-message">{errors.firstName?.message}</p>
-  </div>
+      <div className="Jobtitle border border-5 border-info rounded-top rounded-bottom">
+        <ProfileImage register={register} errors={errors} getValues={getValues} />
 
-  <div className="col-sm-4">
-    <label className="form-label" htmlFor="lastName">Last Name:</label>
-    <input
-      type="text"
-      className="form-control"
-      id="lastName"
-      {...register("lastName", {
-        // ... validation rules
-      })}
-      placeholder="Enter your last name"
-    />
-    <p className="error-message">{errors.lastName?.message}</p>
-  </div>
+        {/* firstName  */}
+        <div className="row">
+          <div className="col-sm-4">
+            <label className="fw-bold form-label" htmlFor="firstName">First Name:</label>
+            <input
+              type="text"
+              className="form-control  border border-1 border-dark"
+              id="firstName"
+              {...register("firstName", {
+                // ... validation rules
+              })}
+              placeholder="Enter First Name"
+            />
+            <p className="error-message">{errors.firstName?.message}</p>
+          </div>
 
-  <div className="col-sm-4">
-    <label className="form-label" htmlFor="jobTitle">Job Title:</label>
-    <input
-      type="text"
-      className="form-control"
-      id="jobTitle"
-      name="jobTitle"
-      {...register("jobTitle", {
-        // ... validation rules
-      })}
-      placeholder="Enter your jobTitle"
-    />
-    <p className="">{errors.jobTitle?.message}</p>
-  </div>
+          <div className="col-sm-4">
+            <label className="fw-bold form-label" htmlFor="lastName">Last Name:</label>
+            <input
+              type="text"
+              className="form-control  border border-1 border-dark"
+              id="lastName"
+              {...register("lastName", {
+                // ... validation rules
+              })}
+              placeholder="Enter your last name"
+            />
+            <p className="error-message">{errors.lastName?.message}</p>
+          </div>
 
-  <div className="col-sm-4">
-    <label className="form-label" htmlFor="phone">Primary Phone:</label>
-    <input
-      type="number"
-      className="form-control"
-      id="phone"
-      name="phone"
-      {...register("phone.0", {
-        // ... validation rules
-      })}
-      placeholder="Enter your Phone Number"
-    />
-    <p className="">{errors.phone?.message}</p>
-  </div>
+          <div className="col-sm-4">
+            <label className="fw-bold form-label" htmlFor="jobTitle">Job Title:</label>
+            <input
+              type="text"
+              className="form-control  border border-1 border-dark"
+              id="jobTitle"
+              name="jobTitle"
+              {...register("jobTitle", {
+                // ... validation rules
+              })}
+              placeholder="Enter your jobTitle"
+            />
+            <p className="">{errors.jobTitle?.message}</p>
+          </div>
+
+          <div className="col-sm-4">
+            <label className="fw-bold form-label" htmlFor="phone">Primary Phone:</label>
+            <input
+              type="number"
+              className="form-control  border border-1 border-dark"
+              id="phone"
+              name="phone"
+              {...register("phone.0", {
+                // ... validation rules
+              })}
+              placeholder="Enter your Phone Number"
+            />
+            <p className="">{errors.phone?.message}</p>
+          </div>
 
 
           {/* secondary Phone Number */}
           <div className="col-md-4">
-            <label className="form-label" htmlFor="Secondphone">
-              Secondary Phone Number
+            <label className="fw-bold form-label" htmlFor="Secondphone">
+              WhatsApp Number
             </label>
             <input
               type="number"
-              className="form-control"
+              className="form-control  border border-1 border-dark"
               id="Secondphone"
               name="Secondphone"
               {...register("phone.1", {
@@ -113,10 +114,10 @@ const {
           </div>
           {/* Personal Email  */}
           <div className="col-md-4">
-            <label className="form-label" htmlFor="email">Email:</label>
+            <label className="fw-bold form-label" htmlFor="email">Email:</label>
             <input
               type="email"
-              className="form-control"
+              className="form-control  border border-1 border-dark"
               id="email"
               {...register("email", {
                 required: {
@@ -137,10 +138,10 @@ const {
           {/* Address details  */}
           {/* Address Pincode */}
           <div className="col-md-4">
-            <label className="form-label" htmlFor="pincode">Pincode:</label>
+            <label className="fw-bold form-label" htmlFor="pincode">Pincode:</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control  border border-1 border-dark"
               id="pincode"
               {...register("address.pincode", {
                 required: {
@@ -162,10 +163,10 @@ const {
           </div>
           {/* Address City */}
           <div className="col-md-4">
-            <label className="form-label" htmlFor="city">City:</label>
+            <label className="fw-bold form-label" htmlFor="city">City:</label>
             <input
               type="city"
-              className="form-control"
+              className="form-control  border border-1 border-dark"
               id="city"
               {...register("address.city", {})}
               placeholder="Enter your city "
@@ -174,10 +175,10 @@ const {
           </div>
           {/* Address Country */}
           <div className="col-md-4">
-            <label className="form-label" htmlFor="country">Country:</label>
+            <label className="fw-bold form-label" htmlFor="country">Country:</label>
             <input
               type="country"
-              className="form-control"
+              className="form-control  border border-1 border-dark"
               id="country"
               {...register("address.country", {})}
               placeholder="Enter your Country"
@@ -197,7 +198,7 @@ const {
                       {...register(
                         ` socialMediaLinks.${index}.links`
                       )}
-                      className="form-control"
+                      className="form-control  border border-1 border-dark my-2"
                     />
                     {index > 0 && (
                       <button
@@ -220,10 +221,10 @@ const {
               <AddIcon />
             </button>
           </div>
-          </div>
-          {/* Address City */}
-    
-        </section>
+        </div>
+        {/* Address City */}
+
+
       </div>
     </div>
   )

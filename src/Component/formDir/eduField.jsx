@@ -15,16 +15,16 @@ const EduField = ({ register, errors, control }) => {
   });
 
   return (
-    <div className="row">
+    <div className="row EducationDetails border border-5 border-info">
       {/* Fill Education Details */}
-      <h1> Fill Education Details</h1>
+      <h1 className='text-center text-center fw-bold py-2 px-1 '> Fill Education Details</h1>
 
       <div className="col-10">
         {/* firstName Job title */}
         <label className="form-label" htmlFor="schoolName">School Name:</label>
         <input
           type="text"
-          className="form-control"
+          className="form-control    border border-1 border-dark"
           id="schoolName"
           {...register("Education.schoolName", {
             minLength: {
@@ -50,7 +50,7 @@ const EduField = ({ register, errors, control }) => {
         <label className="form-label" htmlFor="schoolStartDate">School Start Date </label>
         <input
           type="date"
-          className="form-control"
+          className="form-control border border-1 border-dark"
           id="schoolStartDate"
           {...register("schoolStartDate", {
             required: {
@@ -68,7 +68,7 @@ const EduField = ({ register, errors, control }) => {
         <label className="form-label" htmlFor="schoolEndDate">School End Date </label>
         <input
           type="date"
-          className="form-control"
+          className="form-control border border-1 border-dark"
           id="Education.schoolEndDate"
           {...register("schoolEndDate", {
             required: {
@@ -97,12 +97,11 @@ const EduField = ({ register, errors, control }) => {
       {/* Degree of study  */}
 
       <div className='row'>
-        <h3> fields QualificationDegreeFields </h3>
-        {QualificationDegreeFields &&
+         {QualificationDegreeFields &&
           QualificationDegreeFields?.map((field, index) => {
             return (
-              <div key={field.id} className="col-md-5">
-                <label className="form-label" htmlFor="education_field">Currently Ongoing</label>
+              <div key={field.id} className="col-md-6">
+                <label className="form-label" htmlFor="education_field">Qualification Degree</label>
 
                 <input
                   type="text"
@@ -110,7 +109,7 @@ const EduField = ({ register, errors, control }) => {
                   {...register(
                     `Education.QualificationDegree.${index}.degree`
                   )}
-                  className="form-control"
+                  className="form-control my-2  border border-1 border-dark"
                 />
                 {index > 0 && (
                   <button
@@ -139,7 +138,7 @@ const EduField = ({ register, errors, control }) => {
           <label className="form-label" htmlFor="workSummaryDescription">Description</label>
           <textarea
             type="date"
-            className="form-control"
+            className="form-control border border-1 border-dark"
             id="workSummaryDescription"
             {...register("Education.workSummaryDescription", {
               //   valueAsDate: true,

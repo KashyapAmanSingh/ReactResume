@@ -18,17 +18,18 @@ const ProfExp = ({ register, errors, control }) => {
 
   return (
 
-    <div className="professionalExperience">
+    <div className="professionalExperience border border-5 border-info rounded-top rounded-bottom">
       <div className="row">
 
 
-        <h1 className="my-5 py-5">Professional Experience</h1>
+        <h1 className="fw-bold mb-4 text-center">Professional Experience</h1>
         {/* Position Title */}
         <div className="col-sm-6">
-          <label className="form-label" htmlFor="positionTitle">Position Title:</label>
+          <label className="fw-bold form-label" htmlFor="positionTitle">Position Title:</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control  border border-1 border-dark
+"
             id="positionTitle"
             name="positionTitle"
             {...register("professionalExperience.positionTitle", {
@@ -43,10 +44,11 @@ const ProfExp = ({ register, errors, control }) => {
         </div>
         {/*Company name  */}
         <div className="col-sm-6">
-          <label className="form-label" htmlFor="companyName">Company Name:</label>
+          <label className="fw-bold form-label" htmlFor="companyName">Company Name:</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control  border border-1 border-dark
+"
             id="companyName"
             name="companyName"
             {...register("professionalExperience.companyName", {
@@ -62,10 +64,11 @@ const ProfExp = ({ register, errors, control }) => {
 
         {/* Start Date  */}
         <div className="col-sm-6">
-          <label className="form-label" htmlFor="startDate"> Start Date </label>
+          <label className="fw-bold form-label" htmlFor="startDate"> Start Date </label>
           <input
             type="date"
-            className="form-control"
+            className="form-control  border border-1 border-dark
+"
             id="startDate"
             {...register("professionalExperience.startDate", {
               //   valueAsDate: true,
@@ -81,10 +84,10 @@ const ProfExp = ({ register, errors, control }) => {
 
         {/* End Date  */}
         <div className="col-sm-6">
-          <label className="form-label" htmlFor="endDate"> End Date </label>
+          <label className="fw-bold form-label" htmlFor="endDate"> End Date </label>
           <input
             type="date"
-            className="form-control"
+            className="form-control  border border-1 border-dark"
             id="endDate"
             {...register("professionalExperience.endDate", {
               //   valueAsDate: true,
@@ -95,7 +98,7 @@ const ProfExp = ({ register, errors, control }) => {
             })}
             placeholder="Enter your  End Date "
           />
-          <label className="form-label" htmlFor="currently">Currently Ongoing</label>
+          <label className="fw-bold form-label" htmlFor="currently">Currently Ongoing</label>
           <input
             type="checkbox"
             id="currently"
@@ -104,73 +107,70 @@ const ProfExp = ({ register, errors, control }) => {
           <p className=" "> {errors.endDate?.message}</p>
         </div>
 
-        {/* <div className="col-sm-6">
-            <label  className="form-label" htmlFor="currently">Currently Ongoing</label>
-            <input
-              type="checkbox"
-              id="currently"
-              {...register("professionalExperience.currently")}
+
+        <div className='row'>
+          {/* Add more experience */}
+
+
+          {/* Work Summary */}
+
+          <div className="col-sm-6">
+            <label className="fw-bold form-label" htmlFor="workSummary">Work Summary</label>
+            <textarea
+              type="date"
+              className="form-control  border border-1 border-dark
+"
+              id="workSummary"
+              {...register("professionalExperience.workSummary", {
+                //   valueAsDate: true,
+                required: {
+                  value: true,
+                  message: "Please enter workSummary",
+                },
+              })}
+              placeholder="Enter your workSummary "
             />
-          </div> */}
-<div className='row'>
-     {/* Add more experience */}
-  
- 
-    {/* Work Summary */}
- 
-        <div className="col-sm-6">
-          <label className="form-label" htmlFor="workSummary">Work Summary</label>
-          <textarea
-            type="date"
-            className="form-control"
-            id="workSummary"
-            {...register("professionalExperience.workSummary", {
-              //   valueAsDate: true,
-              required: {
-                value: true,
-                message: "Please enter workSummary",
-              },
-            })}
-            placeholder="Enter your workSummary "
-          />
-          <p className=" "> {errors.workSummary?.message}</p>
-        </div>
-        {ExperienceFields &&
-          ExperienceFields?.map((field, index) => {
-            return (
-              <div key={field.id} className="col-sm-5">
-                <label className="form-label" htmlFor="Experienc"> Add More Experience</label>
+            <p className=" "> {errors.workSummary?.message}</p>
+          </div>
+          {ExperienceFields &&
+            ExperienceFields?.map((field, index) => {
+              
+              return (
+                
+                <div key={field.id} className="col-sm-5">
+                  <label className="fw-bold form-label" htmlFor="Experienc"> Add More Experience</label>
 
-                <textarea
-                  type="text"
-                  id='Experienc'
-                  {...register(
-                    `professionalExperience.moreExperienceFields.${index}.experience`
+                  <textarea
+                    type="text"
+                    id='Experienc'
+                    {...register(
+                      `professionalExperience.moreExperienceFields.${index}.experience`
+                    )}
+                    className="form-control  border border-1 border-dark
+ "
+                  />
+                  {index > 0 && (
+                    <button
+                      type="button"
+                      className="btn btn-danger"
+                      onClick={() => removemoreExperience(index)}
+                    >
+                      <DeleteForeverIcon />
+
+                    </button>
                   )}
-                  className="form-control"
-                />
-                {index > 0 && (
                   <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={() => removemoreExperience(index)}
+                    className="btn btn-danger mx-2 my-2"
+                    onClick={() => appendmoreExperience({ number: "" })}
                   >
-                    <DeleteForeverIcon />
 
+                    <AddIcon />
                   </button>
-                )}
-                   <button
-          className="btn btn-danger mx-2"
-          onClick={() => appendmoreExperience({ number: "" })}
-        >
+                </div>
+              );
+            })}
 
-          <AddIcon />
-        </button>
-              </div>
-            );
-          })}
- 
-      </div>
+        </div>
       </div>
 
     </div>

@@ -41,7 +41,7 @@ function PDFGenerator() {
 
   return (
     <div className="my-5">
-      <h4 className="mb-3 text-mute fs-2 ">Enter Resume File Name</h4>
+      <h4 className="mb-3 text-mute fs-2 ">Enter File Name</h4>
       <div className="container">
         <div className="row">
           <input

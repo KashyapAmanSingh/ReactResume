@@ -4,10 +4,10 @@ import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
 import InfoIcon from '@mui/icons-material/Info';
 import MenuIcon from '@mui/icons-material/Menu';
 import LOGO from "../../assets/image/LOGO.png"
- const NvOff = () => {
+ const SideBar = () => {
   return (
     <div>
-      <div className="offcanvas offcanvas-start" id="demo">
+      <div className="offcanvas offcanvas-start" id="SideBar">
         <div className="offcanvas-header">
       
           <img  className="offcanvas-title mx-5 pt-2 " src={LOGO } alt='Heading Logo'/>
@@ -47,8 +47,8 @@ import LOGO from "../../assets/image/LOGO.png"
         </div>
       </div>
 
-      <div className="container-fluid mt-3">
-        <button className="btn   mx-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+      <div className="container-fluid mt-0">
+        <button className="btn   mx-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#SideBar">
           <MenuIcon sx={{ fontSize: 70 }} color="info"/>
         </button>
       </div>
@@ -56,4 +56,4 @@ import LOGO from "../../assets/image/LOGO.png"
   );
 }
 
-export default NvOff;
+export default SideBar;
