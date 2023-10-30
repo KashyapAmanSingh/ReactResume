@@ -1,12 +1,9 @@
-import React from "react";
-
-import "bootstrap/dist/css/bootstrap.min.css";
+ 
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import Link from "next/link";
-import PrintButton from "../Component/btnbtn"
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { Link } from "react-router-dom";
+ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function ResumeTemplateFirst() {
   return (

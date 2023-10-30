@@ -1,38 +1,25 @@
-import React from "react";
-import Link from "next/link";
-import {
-  FcAddDatabase,
-  FcBusinessman,
-  FcHome,
-  FcMoneyTransfer,
-  FcPieChart,
-} from "react-icons/fc";
-import { BiLogOut } from "react-icons/bi";
 
+import { Link } from "react-router-dom";
+ 
+ 
+import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+import HomeIcon from '@mui/icons-material/Home';
+
+import InfoIcon from '@mui/icons-material/Info';
 const NavBar = () => {
   return (
     <div>
       <nav id="sidebar" className="active">
         <div className={`col-auto bg-dark text-info position-fixed vh-100 'active' `}>
-          <ul className="nav flex-column ">
+          <ul className="nav   ">
             <div className="d-flex justify-content-center"></div>
-            <li className="nav-item">
-              <Link
-                href="/profile"
-                className="text-white fw-bolder nav-link fs-2 mt-3 mx-1"
-              >
-                <FcBusinessman />
-                <span className="d-none d-sm-none d-md-none d-lg-inline">
-                  Profile
-                </span>
-              </Link>
-            </li>
+           
             <li className="nav-item">
               <Link
                 href="/"
                 className="text-white fw-bolder nav-link fs-2 mt-3 mx-1"
               >
-                <FcHome />
+                <HomeIcon/>
                 <span className="d-none d-sm-none d-md-none d-lg-inline">
                   Home
                 </span>
@@ -43,7 +30,7 @@ const NavBar = () => {
                 href="/UserHookForm"
                 className="text-white fw-bold nav-link fs-3"
               >
-                <FcAddDatabase size={29} />
+                <FormatAlignCenterIcon size={29} />
                 <span className="d-none d-sm-none d-md-none d-lg-inline">
                   {" "}
                     HookForm{" "}
@@ -55,7 +42,7 @@ const NavBar = () => {
                 href="/template2"
                 className="text-white fw-bold d-flex align-items-center nav-link fs-2 mx-1"
               >
-                <FcPieChart size={35} />
+                < InfoIcon size={35} />
                 <span className="d-none d-sm-none d-md-none d-lg-inline">
                   {" "}
                   Preview{" "}
