@@ -1,15 +1,16 @@
 /* eslint-disable react/prop-types */
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-
-const ProfileImage = ({ register, errors, getValues }) => {
+ 
+const ProfileImage = ({ register, errors, getValues ,isDirty}) => {
+ 
     const imageFiles = getValues("personalDetails.image"); // Assuming this is your FileList object
-    console.log(`Image Files: ${imageFiles}`);
-     return (
-        <div className="form-group">
+   
+    return (
+        <div className="form-group mx-5 px-5 px-md-4 py-md-3 mx-md-2">
 
             <label
                 htmlFor="image"
-                className="rounded-circle border border-4 border-info text-center d-flex justify-content-center align-items-center"
+                className="mx-md-4 mx-4 rounded-circle border border-4 border-info text-center d-flex justify-content-center align-items-center"
                 style={{ width: "8rem", height: "8rem" }}
             >
                 {imageFiles?.length > 0 ? (
@@ -37,7 +38,7 @@ const ProfileImage = ({ register, errors, getValues }) => {
                 })}
                 style={{ display: "none" }}
             />
-            <p className="error-message">{errors.personalDetails?.image.message}</p>
+            <p className="error-message fw-bold mt-3 mx-0">{errors.personalDetails?.image?.message}</p>
         </div>
     );
 };

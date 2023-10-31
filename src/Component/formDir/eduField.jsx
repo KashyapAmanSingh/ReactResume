@@ -15,10 +15,10 @@ const EduField = ({ register, errors, control }) => {
   });
 
   return (
-    <div className=" EducationDetails border border-5 border-info">
-      
+    <div className="mt-5 py-3 rounded-4 EducationDetails border border-5 border-info">
+
       <h1 className='text-center text-center fw-bold py-2 px-1 '> Fill Education Details</h1>
- 
+
       {QualificationDegreeFields &&
         QualificationDegreeFields?.map((field, index) => {
 
@@ -28,14 +28,14 @@ const EduField = ({ register, errors, control }) => {
               <div className='row'>
                 {/* Qualification Degree */}
                 <div className="col-sm-6">
-                  <label className="form-label" htmlFor="education_field">Qualification Degree</label>
+                  <label className="fw-bold form-label " htmlFor="education_field">Qualification Degree</label>
                   <input
                     type="text"
                     id="degree"
                     {...register(
                       `QualificationDegree.[${index}].degree`
                       , {
-                 
+
                         required: {
                           value: true,
                           message: "Please enter Qualification Degree",
@@ -43,12 +43,12 @@ const EduField = ({ register, errors, control }) => {
                       })}
                     className="form-control  border border-1 border-dark"
                   />
-  
-          <p className="text-danger">{errors.QualificationDegree?.[index]?.degree?.message}</p>
-             </div>
+
+                  <p className="text-danger">{errors.QualificationDegree?.[index]?.degree?.message}</p>
+                </div>
                 {/* School Name */}
                 <div className="col-sm-6">
-                  <label className="form-label" htmlFor="schoolName">School/College Name:</label>
+                  <label className="fw-bold form-label " htmlFor="schoolName">School/College Name:</label>
                   <input
                     type="text"
                     className="form-control border border-1 border-dark"
@@ -69,13 +69,13 @@ const EduField = ({ register, errors, control }) => {
                     })}
                     placeholder="Enter School Name"
                   />
-                               <p className="text-danger">{errors.QualificationDegree?.[index]?.schoolName?.message}</p>
+                  <p className="text-danger">{errors.QualificationDegree?.[index]?.schoolName?.message}</p>
 
                 </div>
 
                 {/* School Start Date  */}
                 <div className="col-sm-6">
-                  <label className="form-label" htmlFor="schoolStartDate">School Start Date </label>
+                  <label className="fw-bold form-label " htmlFor="schoolStartDate">School Start Date </label>
                   <input
                     type="date"
                     className="form-control border border-1 border-dark"
@@ -93,7 +93,7 @@ const EduField = ({ register, errors, control }) => {
 
                 {/*School  End Date  */}
                 <div className="col-sm-6">
-                  <label className="form-label" htmlFor="schoolEndDate">School End Date </label>
+                  <label className="fw-bold form-label " htmlFor="schoolEndDate">School End Date </label>
                   <input
                     type="date"
                     className="form-control border border-1 border-dark"
@@ -108,7 +108,7 @@ const EduField = ({ register, errors, control }) => {
                   />
 
                   <div className=" ">
-                    <label className="form-label" htmlFor="currently">Currently Ongoing</label>
+                    <label className=" form-label  small  mx-1 px-1" htmlFor="currently">Currently Ongoing</label>
                     <input
                       type="checkbox"
                       id="currently"
@@ -120,11 +120,11 @@ const EduField = ({ register, errors, control }) => {
 
                 </div>
                 {/* Description */}
-                <div className="col-sm-12">
-                  <label className="form-label" htmlFor="degreeDescription">Description</label>
+                <div className="col-sm-8 col-md-10 ">
+                  <label className="fw-bold form-label " htmlFor="degreeDescription">Description</label>
                   <textarea
                     type="date"
-                    className="form-control border border-1 border-dark"
+                    className="form-control border border-1 border-dark "
                     id="degreeDescription"
                     {...register(`QualificationDegree[${index}].degreeDescription`, {
                       //   valueAsDate: true,
@@ -135,28 +135,31 @@ const EduField = ({ register, errors, control }) => {
                     })}
                     placeholder="Enter your degreeDescription "
                   />
-        <p className="text-danger">{errors.QualificationDegree?.[index]?.degreeDescription?.message}</p>
+                  <p className="text-danger">{errors.QualificationDegree?.[index]?.degreeDescription?.message}</p>
 
                 </div>
+                <div className='col-sm-2 my-auto mx-auto'>
 
-                {index > 0 && (
-                  <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={() => removeQualificationDegree(index)}
-                  >
-                    <DeleteForeverIcon />
+                  {index > 0 && (
+                    <button
+                      type="button"
+                      className="btn  btn-danger btn btn-info mt-1 mx-3 mb-1 "
+                      onClick={() => removeQualificationDegree(index)}
+                    >
+                      <DeleteForeverIcon />
 
-                  </button>
-                )}
-                 <button
-                className="btn btn-danger mt-1 mx-3"
-                onClick={() => appendQualificationDegree(
-                  { degree: "", schoolName: ' ', schoolStartDate: ' ', schoolEndDate: ' ', currently: false, degreeDescription: ' ' }
+                    </button>
                   )}
-              >
-                <AddIcon />
-              </button>
+                  <button
+                    className="btn btn-info btn btn-info mt-1 mx-3 mb-1"
+                    onClick={() => appendQualificationDegree(
+                      { degree: "", schoolName: ' ', schoolStartDate: ' ', schoolEndDate: ' ', currently: false, degreeDescription: ' ' }
+                    )}
+                  >
+                    <AddIcon />
+                  </button>
+                </div>
+
               </div>
             </div>
           );

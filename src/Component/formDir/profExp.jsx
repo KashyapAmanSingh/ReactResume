@@ -18,13 +18,17 @@ const ProfExp = ({ register, errors, control }) => {
 
   return (
 
-    <div className="professionalExperience border border-5 border-info rounded-top rounded-bottom">
-      <h1 className="fw-bold mb-4 text-center">Professional Experience</h1>
+    <div className="professionalExperience mt-5 py-2 border border-5 border-info rounded-top rounded-bottom">
+
  
         {ExperienceFields &&
+
           ExperienceFields?.map((field, index) => {
+            
             return (
+              
               <div key={field.id} className=" ">
+                      <h1 className="fw-bold mb-4 text-center">Professional Experience {index+1}</h1> 
                 <div className='row'>
                   <div className="col-sm-6">
                     <label className="fw-bold form-label" htmlFor="positionTitle">Position Title:</label>
@@ -99,17 +103,18 @@ const ProfExp = ({ register, errors, control }) => {
                       })}
                       placeholder="Enter your  End Date "
                     />
-                    <label className="fw-bold form-label" htmlFor="currently">Currently Ongoing</label>
+                    <label className="small form-label mx-1 px-1" htmlFor="currently">Currently Ongoing</label>
                     <input
                       type="checkbox"
                       id="currently"
+               
                       {...register(`moreExperienceFields[${index}].currently`)}
                     />
                    <p className="text-danger">{errors.moreExperienceFields?.[index]?.endDate?.message}</p> 
  
                   </div>
                   
-                  <div className="col-sm-6">
+                  <div className="col-sm-6 mt-1">
                     <label className="fw-bold form-label" htmlFor="workSummary">Work Summary</label>
                     <textarea
                       type="date"
@@ -128,8 +133,8 @@ const ProfExp = ({ register, errors, control }) => {
 
                   </div>
 
-                  <div className="col-sm-6">
-                    <label className="fw-bold form-label" htmlFor="Experienc"> Add More Experience</label>
+                  <div className="col-sm-6 mt-1">
+                    <label className="fw-bold form-label" htmlFor="Experienc">Your Experience</label>
                     <textarea
                       type="text"
                       id='Experienc'
@@ -138,20 +143,9 @@ const ProfExp = ({ register, errors, control }) => {
                       )}
                       className="form-control  border border-1 border-dark"
                     />
-                  </div>
-                  {index > 0 && (
-                    <button
-                      type="button"
-                      className="btn btn-danger"
-                      onClick={() => removemoreExperience(index)}
-                    >
-                      <DeleteForeverIcon />
-
-                    </button>
-                  )}
+                    
                   <button
-             
-                    className="btn btn-danger mx-2 my-2"
+                    className="btn btn-info mt-2 mx-3 mb-3 "
                     onClick={() => appendmoreExperience(  {
                       experience: '',
                       companyName: '',
@@ -165,6 +159,19 @@ const ProfExp = ({ register, errors, control }) => {
 
                     <AddIcon />
                   </button>
+                  {index > 0 && (
+                    <button
+                      type="button"
+                      className="btn my-2 mx-3 mb-3 btn-danger"
+                      onClick={() => removemoreExperience(index)}
+                    >
+                      <DeleteForeverIcon />
+
+                    </button>
+                  )}
+                  </div>
+              
+
                 </div>
               </div>
             );

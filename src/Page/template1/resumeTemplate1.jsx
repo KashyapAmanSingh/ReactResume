@@ -18,7 +18,7 @@ import { useSelector } from 'react-redux';
 
 function ResumeTemplateFirst() {
   const data = useSelector((state) => state.user.UserData);
-  console.log(data,"data from   ResumeTemplateFirst");
+  console.log(data,"😜😜😜😜😜😜data from   ResumeTemplateFirst");
 
   return (
     <div className="container ">

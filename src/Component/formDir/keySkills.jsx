@@ -3,11 +3,7 @@
 import { useFieldArray } from 'react-hook-form';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-
-
-
-
-
+ 
 const KeySkills = ({ register, control, errors }) => {
 
   const {
@@ -43,8 +39,10 @@ const KeySkills = ({ register, control, errors }) => {
     name: "Keyhobby",
     control: control,
   });
+
+
   return (
-    <div className="row KeySkil border border-5 border-info rounded-top rounded-bottom">
+    <div className="row mt-5 py-2 KeySkil border border-5 border-info rounded-4 ">
       <h1 className='text-center text-center fw-bold py-2 px-1  '> Fill Key Skills Details</h1>
 
       <div className="col-md-6">
@@ -63,23 +61,24 @@ const KeySkills = ({ register, control, errors }) => {
                 })}
                 className="form-control my-2  border border-1 border-dark"
               />
+                 <p className="text-danger">
+                {errors.KeySkill?.KeySkills?.[index]?.skill?.message}
+              </p>
               {index > 0 && (
                 <button
                   type="button"
-                  className="btn btn-danger"
+                  className="btn btn-danger mt-0 my-1 mx-2"
                   onClick={() => removeKeySkill(index)}
                 >
                   <DeleteForeverIcon />
                 </button>
 
               )}
-              <p className="text-danger">
-                {errors.KeySkill?.KeySkills?.[index]?.skill?.message}
-              </p>
+           
             </div>
           ))}
         <button
-          className="btn btn-danger my-1"
+          className="btn btn-info  mt-0 my-1 mx-2"
           onClick={() => appendKeySkill({ skill: "" })}
         >
           <AddIcon />
@@ -103,22 +102,23 @@ const KeySkills = ({ register, control, errors }) => {
                 })}
                 className="form-control my-2  border border-1 border-dark"
               />
+                  <p className="text-danger">
+                {errors.KeySkill?.Keylanguages?.[index]?.language?.message}
+              </p>
               {index > 0 && (
                 <button
                   type="button"
-                  className="btn btn-danger my-1"
+                  className="btn btn-danger  mt-0 my-1 mx-2"
                   onClick={() => removeKeylanguage(index)}
                 >
                   <DeleteForeverIcon />
                 </button>
               )}
-              <p className="text-danger">
-                {errors.KeySkill?.Keylanguages?.[index]?.language?.message}
-              </p>
+          
             </div>
           ))}
         <button
-          className="btn btn-danger my-1"
+          className="btn btn-info  mt-0 my-1 mx-2"
           onClick={() => appendKeylanguage({ skill: "" })}
         >
           <AddIcon />
@@ -147,7 +147,7 @@ const KeySkills = ({ register, control, errors }) => {
               {index > 0 && (
                 <button
                   type="button"
-                  className="btn btn-danger my-1"
+                  className="btn btn-danger  mt-0 my-1 mx-2"
                   onClick={() => removeHobbyFields(index)}
                 >
                   <DeleteForeverIcon />
@@ -159,7 +159,7 @@ const KeySkills = ({ register, control, errors }) => {
             </div>
           ))}
         <button
-          className="btn btn-danger   my-1"
+          className="btn btn-info  mt-0 my-1 mx-2"
           onClick={() => appendHobbyFields({ skill: "" })}
         >
           <AddIcon />
@@ -184,7 +184,7 @@ const KeySkills = ({ register, control, errors }) => {
               {index > 0 && (
                 <button
                   type="button"
-                  className="btn btn-danger my-1"
+                  className="btn btn-danger  mt-0 my-1 mx-2"
                   onClick={() => removeAccomplishment(index)}
                 >
                   <DeleteForeverIcon />
@@ -196,7 +196,7 @@ const KeySkills = ({ register, control, errors }) => {
             </div>
           ))}
         <button
-          className="btn btn-danger my-1"
+          className="btn btn-info  mt-0 my-1 mx-2"
           onClick={() => appendAccomplishment({ skill: "" })}
         >
           <AddIcon />

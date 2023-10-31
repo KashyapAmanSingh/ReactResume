@@ -11,8 +11,7 @@ import ProfExp from "../formDir/profExp";
 import EduField from "../formDir/eduField";
 import KeySkills from "../formDir/keySkills";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import ProfileImage from "../formDir/ProfileImage";
-import { FormDefaultConfig } from "../formDir/FormDefaultConfig";
+ import { FormDefaultConfig } from "../formDir/FormDefaultConfig";
 
 export default function ResumeDetailFillForm() {
   const [formCount, setFormCount] = useState(1);
@@ -65,16 +64,15 @@ export default function ResumeDetailFillForm() {
   };
 
   return (
-    <div className="mainFormComponent ">
+    <div className="container ">
       <div className="row">
         {/* form side bar */}
-        <div className="col-sm-3 mt-5 pt-3">
+        <div className="col-sm-3 mt-5 pt-3 ">
           <SideBar formCount={formCount} />
         </div>
 
-        <div className="col-sm-9 ">
+        <div className="col-sm-8 ">
           {/* Resume Picture */}
-
           <form onSubmit={handleSubmit(formSubmit)} noValidate className="row g-3   ">
             {/* <h3 key={2}>userWatch---{JSON.stringify(userWatch)}</h3> */}
             {formCount === 1 ? (

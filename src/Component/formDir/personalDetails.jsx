@@ -5,7 +5,7 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { useFieldArray } from 'react-hook-form';
 import ProfileImage from './ProfileImage';
 
-const PersonalDetails = ({ register, errors, control, getValues }) => {
+const PersonalDetails = ({ register, errors, control, getValues   }) => {
 
 
 
@@ -19,14 +19,14 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
   });
   return (
 
-    <div className="Jobtitle border border-5 border-info rounded-top rounded-bottom">
+    <div className="rounded-4 Jobtitle mt-5 border border-5 border-info rounded-top rounded-bottom">
       <ProfileImage register={register} errors={errors} getValues={getValues} />
 
       {/* firstName  */}
        
       <div className="row">
         <div className="col-sm-4">
-          <label className="fw-bold form-label" htmlFor="firstName">First Name:</label>
+          <label className="fw-bold form-label" htmlFor="firstName">First Name</label>
           <input
             type="text"
             className="form-control  border border-1 border-dark"
@@ -43,7 +43,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
         </div>
 
         <div className="col-sm-4">
-          <label className="fw-bold form-label" htmlFor="lastName">Last Name:</label>
+          <label className="fw-bold form-label" htmlFor="lastName">Last Name</label>
           <input
             type="text"
             className="form-control  border border-1 border-dark"
@@ -60,7 +60,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
         </div>
 
         <div className="col-sm-4">
-          <label className="fw-bold form-label" htmlFor="jobTitle">Job Title:</label>
+          <label className="fw-bold form-label" htmlFor="jobTitle">Job Title</label>
           <input
             type="text"
             className="form-control  border border-1 border-dark"
@@ -80,7 +80,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
 
 
         <div className="col-sm-4">
-          <label className="fw-bold form-label" htmlFor="phone">Primary Phone:</label>
+          <label className="fw-bold form-label" htmlFor="phone">Primary Phone</label>
           <input
             type="number"
             className="form-control  border border-1 border-dark"
@@ -140,7 +140,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
 
         {/* Personal Email  */}
         <div className="col-md-4">
-          <label className="fw-bold form-label" htmlFor="email">Email:</label>
+          <label className="fw-bold form-label" htmlFor="email">Email</label>
           <input
             type="email"
             className="form-control  border border-1 border-dark"
@@ -163,7 +163,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
         </div>
         {/* Address Pincode */}
         <div className="col-md-4">
-          <label className="fw-bold form-label" htmlFor="pincode">Pincode:</label>
+          <label className="fw-bold form-label" htmlFor="pincode">Pincode</label>
           <input
             type="number"
             className="form-control  border border-1 border-dark"
@@ -190,7 +190,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
 
         {/* Address City */}
         <div className="col-md-4">
-          <label className="fw-bold form-label" htmlFor="city">City:</label>
+          <label className="fw-bold form-label" htmlFor="city">City</label>
           <input
             type="city"
             className="form-control  border border-1 border-dark"
@@ -208,7 +208,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
         </div>
         {/* Address Country */}
         <div className="col-md-4">
-          <label className="fw-bold form-label" htmlFor="country">Country:</label>
+          <label className="fw-bold form-label" htmlFor="country">Country</label>
           <input
             type="country"
             className="form-control  border border-1 border-dark"
@@ -225,13 +225,16 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
 
         </div>
         {/* add social media links for connection */}
-        <h3> fields social media links </h3>
-        <div className='row'>
-  <div className='col-sm-10'>
+       
+        <div className='row py-3'>
+ 
     {socialMediaFields &&
       socialMediaFields?.map((field, index) => {
         return (
+          <>        
           <div key={field.id} className="col-md-8">
+          <label className="fw-bold form-label" htmlFor="country">Social Connection media links  {index+1}</label>
+ 
             <input
               type="text"
               {...register(
@@ -239,26 +242,37 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
               )}
               className="form-control  border border-1 border-dark my-2"
             />
+ 
+          </div>
+            <div className='col-sm-2 d-flex justify-content-between align-items-center '>
+          
+            <button
+              type='submit'
+              className="btn btn-info btn btn-info  mx-4 mt-4"
+              onClick={() => appendSocialMedia({ links: "" })}
+            >
+              <AddIcon />
+            </button>
             {index > 0 && (
               <button
                 type="button"
-                className="btn btn-danger mx-4"
+                className="btn btn-danger btn btn-info mx-4 mt-4"
                 onClick={() => removeSocialMedia(index)}
               >
                 <DeleteForeverIcon />
               </button>
             )}
-            <button
-              type='submit'
-              className="btn btn-danger mx-4"
-              onClick={() => appendSocialMedia({ links: "" })}
-            >
-              <AddIcon />
-            </button>
-          </div>
+            </div>
+            </>
         );
       })}
-  </div>
+ 
+
+
+  
+
+
+  
 </div>
 
       </div>
