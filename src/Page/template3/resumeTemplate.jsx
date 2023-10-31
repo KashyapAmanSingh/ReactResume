@@ -27,7 +27,7 @@ const ResumeTemplateThird = () => {
                             {/* <!-- Contact Information --> */}
                             <div className="row  mx-1">
                                 <div className="col-sm-3 ">
-                                    <div className="SideBarContact mt-1">
+                                    <div className="SideBarContact mt-2">
                                         <ul className="list-unstyled text-end">
                                             <li>  000-000-0000<LocalPhoneIcon color="success" /></li>
                                             <li>  000-000-0000<WhatsAppIcon color="success" /></li>
@@ -93,6 +93,8 @@ const ResumeTemplateThird = () => {
                                         <p className=' text-success'>Company Name, 2013-Present</p>
                                         <p className='text-break'>Job Description and responsibilities... Lorem, ipsum dolor sit amet
                                             consectetur adipisicing elit. Molestias necessitatibus nihil maiores!
+                                            Voluptates, velit? Veritatis  enimMolestias necessitatibus nihil maiores!
+                                            Voluptates, velit? Veritatis  enimMolestias necessitatibus nihil maiores!
                                             Voluptates, velit? Veritatis  enim quisquam fugiat voluptas
 
                                         </p>
@@ -107,7 +109,8 @@ const ResumeTemplateThird = () => {
                                         <h6 className='m-0  text-success'>Position Title</h6>
                                         <p className=' text-success'>Company Name, 2013-Present</p>
                                         <p className='text-break'>Job Description and responsibilities... Lorem, ipsum dolor sit amet
-                                            consectetur adipisicing elit. Molestias necessitatibus nihil maiores!
+                                            consectetur adipisicing elit.Molestias necessitatibus nihil maiores!
+                                            Voluptates, velit? Veritatis  enim Molestias necessitatibus nihil maiores!
                                             Voluptates, velit? Veritatis fugit con at voluptas
 
                                         </p>

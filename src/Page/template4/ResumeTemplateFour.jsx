@@ -12,7 +12,7 @@ const ResumeTemplateFour = () => {
 
                 <div className="row ">
                     <div className="col-sm-9 mb-5">
-                        <div className="TemplateThird mx-5 mb-5  border border-3  border-success" id='resume-content'>
+                        <div className="TemplateFour mh-130 Third mx-5 mb-5  border border-3  border-success" id='resume-content'>
 
                             {/* <!-- Header with blue background and name/title --> */}
                             <div className="row mx-0  mb-2 ">

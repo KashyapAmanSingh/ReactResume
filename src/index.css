@@ -1,14 +1,14 @@
  
  
-.resume3container{
+  .resume3container{
   width: 70vw !important;
  margin-left:18vw !important;
 height:auto !important;
  border: 3px solid rgb(4, 255, 0) !important;
 padding-bottom: 6rem !important;
-}
+}  
 /* Apply margin-right to all elements with class "skill-h" */
-.skill-h {
+ .skill-h {
  margin-right: 4.1rem !important;
 }
 .Languages-h {
@@ -21,21 +21,22 @@ padding-bottom: 6rem !important;
  width: 100%;
  margin: 0;
  padding: 0;
-}
+}  
 
 /* end template start  */
-.main_header {
- border-bottom: 0.8rem solid #000; /* Replace #000 with your desired border color */
-}
+ .main_header {
+ border-bottom: 0.8rem solid #000;  
+} 
 
-.sidebar {
- border-right: 0.4rem solid #000; /* Replace #000 with your desired border color */
-}
+  .sidebar {
+ border-right: 0.4rem solid #000;  
+}  
 .multi-column-list {
  column-count: 2;
  column-gap: 0.5rem;
 }
 
+ 
 /* mainFormComponent */
 
 /* .mainFormComponent {
@@ -69,11 +70,25 @@ padding-bottom: 6rem !important;
  }
 
 
-
  /* TemplateThird */
 .TemplateThird{
    width: 50rem;
    max-height: 130vh !important;
 }
 
+ @media (min-width: 992px) {
+  .TemplateSecond2{
+    width: 70vw;
+    display: flex !important;
  
+   } 
+   .pdfBtn{
+    width: 90vw;
+   }
+  
+}
+
+/* position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); */

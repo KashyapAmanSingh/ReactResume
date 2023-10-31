@@ -19,7 +19,7 @@ const  Preview = () => {
     <div>
       <h1>Preview</h1>
       {TemplateComponent}
-      
+      <ResumeTemplateFirst  />
     </div>
   );
 };

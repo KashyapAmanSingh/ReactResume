@@ -1,7 +1,6 @@
  
 import HomeIcon from '@mui/icons-material/Home';
-import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
-import InfoIcon from '@mui/icons-material/Info';
+ import InfoIcon from '@mui/icons-material/Info';
 import MenuIcon from '@mui/icons-material/Menu';
 import LOGO from "../../assets/image/LOGO.png"
  const SideBar = () => {
@@ -16,34 +15,22 @@ import LOGO from "../../assets/image/LOGO.png"
         <div className="offcanvas-body">
        
              
-              <a className="d-flex fs-1   align-items-center" href="/">
-                <HomeIcon  fontSize='755'/>
-                <p  className='mx-5'>Home</p>
+              <a className="text-decoration-none d-flex fs-1   align-items-center" href="/">
+                <HomeIcon  fontSize='755' color="warning"/>
+                <p  className='mx-5 text-info' >Home</p>
+              </a> 
+             
+              <a className="text-decoration-none d-flex fs-1   align-items-center" href="/DetailFill/Preview">
+                <InfoIcon   fontSize='55' color="warning"/>
+                <p className='mx-5 text-info'>   My Resume</p>
               </a>
              
              
-              <a className="d-flex fs-1   align-items-center" href="/template2" >
-                <FormatAlignCenterIcon   fontSize='55' />
-                <p  className='mx-5'>Form</p>
+              <a className="text-decoration-none d-flex fs-1   align-items-center" href="/About">
+                <InfoIcon   fontSize='55' color="warning"/>
+                <p className='mx-5 text-info ' >About Us</p>
               </a>
-             
-             
-              <a className="d-flex fs-1   align-items-center" href="/template2">
-                <InfoIcon   fontSize='55'/>
-                <p className='mx-5'>   My Resume</p>
-              </a>
-             
-             
-              <a className="d-flex fs-1   align-items-center" href="/About">
-                <InfoIcon   fontSize='55'/>
-                <p className='mx-5'>About Us</p>
-              </a>
-                      
-              <a className="d-flex fs-1   align-items-center" href="/Preview">
-                <InfoIcon   fontSize='55'/>
-                <p className='mx-5'>Preview</p>
-              </a>
-        
+     
         </div>
       </div>
 
