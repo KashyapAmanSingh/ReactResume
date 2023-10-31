@@ -24,7 +24,7 @@ const KeySkills = ({ register, control }) => {
     append: appendKeylanguage,
     remove: removeKeylanguage,
   } = useFieldArray({
-    name: "Keylanguage",
+    name: "Keylanguages",
     control: control,
   });
   const {

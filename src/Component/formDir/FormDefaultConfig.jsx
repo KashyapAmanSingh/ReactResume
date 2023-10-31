@@ -16,24 +16,7 @@ export const FormDefaultConfig = {
           phone: ['', ''],
           image: "",
         },
-     
-        professionalExperience: {
-          companyName: '',
-          currently: false,
-          endDate: '',
-          positionTitle: '',
-          startDate: '',
-          workSummary: '',
-        },
-  
-        Education: {
-          currently: true,
-          schoolEndDate: ' ',
-          schoolName: ' ',
-          schoolStartDate: ' ',
-          workSummaryDescription: ' ',
-        },
-  
+ 
         socialMediaLinks: [
           {
             links: "",
@@ -41,13 +24,24 @@ export const FormDefaultConfig = {
         ],
         moreExperienceFields: [
           {
-            experience: "",
+            experience: '',
+            companyName: '',
+            currently: false,
+            endDate: '',
+            positionTitle: '',
+            startDate: '',
+            workSummary: '',
           },
-        ],
+        ], 
   
         QualificationDegree: [
           {
             degree: "",
+            schoolName: ' ',
+            schoolStartDate: ' ',
+            schoolEndDate: ' ',
+            currently: false,
+            degreeDescription: ' ',
           },
         ],
         Accomplishment: [

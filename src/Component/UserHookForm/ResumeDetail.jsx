@@ -59,7 +59,7 @@ export default function ResumeDetailFillForm() {
 
   const { name, ref, onChange, onBlur } = register("name");
   const formSubmit = (data) => {
-    alert("😲😲Submit request works😲😲");
+    // alert("😲😲Submit request works😲😲");
     console.log("😲 😲from handleSubmit ", data);
     dispath(addUserData(data));
   };
@@ -95,9 +95,7 @@ export default function ResumeDetailFillForm() {
                 register={register}
                 control={control}
               />
-
-
-            ) : null}
+                   ) : null}
           </form>
 
           <div className="d-flex mt-4 mb-5  justify-content-center">
@@ -123,7 +121,7 @@ export default function ResumeDetailFillForm() {
 
         </div>
       </div>
-
+      <DevTool control={control} />
     </div>
   );
 }

@@ -32,16 +32,17 @@ const ProfileImage = ({ register, errors, getValues }) => {
                 {...register("personalDetails.image", {
                     required: {
                         value: true,
-                        message: "Please enter an image file",
+                        message: "Please Upload an image file",
                     },
                 })}
                 style={{ display: "none" }}
             />
-            <p className="error-message">{errors.image?.message}</p>
+            <p className="error-message">{errors.personalDetails?.image.message}</p>
         </div>
     );
 };
 
 export default ProfileImage;
+
 
 

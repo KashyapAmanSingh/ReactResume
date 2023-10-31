@@ -3,7 +3,6 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
  import AccountCircleIcon from "@mui/icons-material/AccountCircle";
  import { Suspense, lazy } from "react";
-const PDFGenerator = lazy(() => import("../../Component/PdfGenerat"));
 import HomeIcon from '@mui/icons-material/Home';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -12,10 +11,15 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import DescriptionIcon from '@mui/icons-material/Description';
 import LinkIcon from '@mui/icons-material/Link';
+const PDFGenerator = lazy(() => import("../../Component/PdfGenerat"));
+import { useSelector } from 'react-redux';
 
-
+ 
 
 function ResumeTemplateFirst() {
+  const data = useSelector((state) => state.user.UserData);
+  console.log(data,"data from   ResumeTemplateFirst");
+
   return (
     <div className="container ">
       <div className="row ">
@@ -86,11 +90,11 @@ function ResumeTemplateFirst() {
               </ul>
               <div className="Education">
                 <h5>Educational Details</h5>
-                <p>
+          
                   <SchoolIcon/>School Name
                   <br />
                   <p className="d-flex small"><CalendarMonthIcon/> Start-End Date or Ongoing </p>
-                </p>
+               
 
                 <p className="m-0"><WorkspacePremiumIcon/>Degree Field </p>
                 <p className="d-flex small"> Start-End Date or Ongoing </p>

@@ -17,10 +17,8 @@ const  Preview = () => {
 
   return (
     <div>
-      <h1>Preview</h1>
-      {TemplateComponent}
-      <ResumeTemplateFirst  />
-    </div>
+       {TemplateComponent}
+     </div>
   );
 };
 

@@ -11,12 +11,16 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import DescriptionIcon from '@mui/icons-material/Description';
 import ImageIcon from '@mui/icons-material/Image';
 import LinkIcon from '@mui/icons-material/Link';
+import { useSelector } from 'react-redux';
 
 
 
 const PDFGenerator = lazy(() => import("../../Component/PdfGenerat"));
 
 function ResumeTemplateSecond() {
+  const data = useSelector((state) => state.user.UserData);
+  console.log(data,"data from resumeTemplateSecond");
+
   return (
     <>
       <div className="container TemplateSecond2 ">
