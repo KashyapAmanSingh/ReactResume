@@ -94,6 +94,7 @@ export default function ResumeDetailFillForm() {
               <KeySkills
                 register={register}
                 control={control}
+                errors={errors}
               />
                    ) : null}
           </form>

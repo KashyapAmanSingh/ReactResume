@@ -34,10 +34,18 @@ const EduField = ({ register, errors, control }) => {
                     id="degree"
                     {...register(
                       `QualificationDegree.[${index}].degree`
-                    )}
+                      , {
+                 
+                        required: {
+                          value: true,
+                          message: "Please enter Qualification Degree",
+                        },
+                      })}
                     className="form-control  border border-1 border-dark"
                   />
-                </div>
+  
+          <p className="text-danger">{errors.QualificationDegree?.[index]?.degree?.message}</p>
+             </div>
                 {/* School Name */}
                 <div className="col-sm-6">
                   <label className="form-label" htmlFor="schoolName">School/College Name:</label>
@@ -61,7 +69,8 @@ const EduField = ({ register, errors, control }) => {
                     })}
                     placeholder="Enter School Name"
                   />
-                  <p className=" "> {errors.schoolName?.message}</p>
+                               <p className="text-danger">{errors.QualificationDegree?.[index]?.schoolName?.message}</p>
+
                 </div>
 
                 {/* School Start Date  */}
@@ -79,7 +88,7 @@ const EduField = ({ register, errors, control }) => {
                     })}
                     placeholder="Enter your School Start Date "
                   />
-                  <p className=" "> {errors.schoolStartDate?.message}</p>
+                  <p className="text-danger">{errors.QualificationDegree?.[index]?.schoolStartDate?.message}</p>
                 </div>
 
                 {/*School  End Date  */}
@@ -107,7 +116,8 @@ const EduField = ({ register, errors, control }) => {
                     />
                   </div>
 
-                  <p className=""> {errors.schoolEndDate?.message}</p>
+                  <p className="text-danger">{errors.QualificationDegree?.[index]?.currently?.message}</p>
+
                 </div>
                 {/* Description */}
                 <div className="col-sm-12">
@@ -125,7 +135,8 @@ const EduField = ({ register, errors, control }) => {
                     })}
                     placeholder="Enter your degreeDescription "
                   />
-                  <p className=" "> {errors.degreeDescription?.message}</p>
+        <p className="text-danger">{errors.QualificationDegree?.[index]?.degreeDescription?.message}</p>
+
                 </div>
 
                 {index > 0 && (

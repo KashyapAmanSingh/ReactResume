@@ -30,19 +30,20 @@ const ProfExp = ({ register, errors, control }) => {
                     <label className="fw-bold form-label" htmlFor="positionTitle">Position Title:</label>
                     <input
                       type="text"
-                      className="form-control  border border-1 border-dark
-"
+                      className="form-control  border border-1 border-dark"
                       id="positionTitle"
                       name="positionTitle"
                       {...register(`moreExperienceFields[${index}].positionTitle`, {
                         required: {
                           value: true,
-                          message: "Please enter a valid Position Title",
+                          message: "Please enter Position Title",
                         },
                       })}
                       placeholder="Enter your  Position Title"
                     />
-                    <p className=" "> {errors.positionTitle?.message}</p>
+
+          <p className="text-danger">{errors.moreExperienceFields?.[index]?.positionTitle?.message}</p>
+
                   </div>
 
                   <div className="col-sm-6">
@@ -55,12 +56,13 @@ const ProfExp = ({ register, errors, control }) => {
                       {...register(`moreExperienceFields[${index}].companyName`, {
                         required: {
                           value: true,
-                          message: "Please enter a valid Company Name",
+                          message: "Please enter Company Name",
                         },
                       })}
                       placeholder="Enter your  Company Name"
                     />
-                    <p className=" "> {errors.companyName?.message}</p>
+                  <p className="text-danger">{errors.moreExperienceFields?.[index]?.companyName?.message}</p>
+
                   </div>
 
                   <div className="col-sm-6">
@@ -78,7 +80,8 @@ const ProfExp = ({ register, errors, control }) => {
                       })}
                       placeholder="Enter your   start Date "
                     />
-                    <p className=" "> {errors.startDate?.message}</p>
+                 <p className="text-danger">{errors.moreExperienceFields?.[index]?.startDate?.message}</p>
+
                   </div>
 
                   <div className="col-sm-6">
@@ -102,7 +105,8 @@ const ProfExp = ({ register, errors, control }) => {
                       id="currently"
                       {...register(`moreExperienceFields[${index}].currently`)}
                     />
-                    <p className=" "> {errors.endDate?.message}</p>
+                   <p className="text-danger">{errors.moreExperienceFields?.[index]?.endDate?.message}</p> 
+ 
                   </div>
                   
                   <div className="col-sm-6">
@@ -112,7 +116,7 @@ const ProfExp = ({ register, errors, control }) => {
                       className="form-control  border border-1 border-dark"
                       id="workSummary"
                       {...register(`moreExperienceFields[${index}].workSummary`, {
-                        //   valueAsDate: true,
+                 
                         required: {
                           value: true,
                           message: "Please enter workSummary",
@@ -120,7 +124,8 @@ const ProfExp = ({ register, errors, control }) => {
                       })}
                       placeholder="Enter your workSummary "
                     />
-                    <p className=" "> {errors.workSummary?.message}</p>
+                 <p className="text-danger">{errors.moreExperienceFields?.[index]?.workSummary?.message}</p>
+
                   </div>
 
                   <div className="col-sm-6">
@@ -145,6 +150,7 @@ const ProfExp = ({ register, errors, control }) => {
                     </button>
                   )}
                   <button
+             
                     className="btn btn-danger mx-2 my-2"
                     onClick={() => appendmoreExperience(  {
                       experience: '',
