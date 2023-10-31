@@ -30,7 +30,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
               type="text"
               className="form-control  border border-1 border-dark"
               id="firstName"
-              {...register("firstName", {
+              {...register("personalDetails.firstName", {
                 // ... validation rules
               })}
               placeholder="Enter First Name"
@@ -44,7 +44,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
               type="text"
               className="form-control  border border-1 border-dark"
               id="lastName"
-              {...register("lastName", {
+              {...register("personalDetails.lastName", {
                 // ... validation rules
               })}
               placeholder="Enter your last name"
@@ -59,7 +59,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
               className="form-control  border border-1 border-dark"
               id="jobTitle"
               name="jobTitle"
-              {...register("jobTitle", {
+              {...register("personalDetails.jobTitle", {
                 // ... validation rules
               })}
               placeholder="Enter your jobTitle"
@@ -74,7 +74,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
               className="form-control  border border-1 border-dark"
               id="phone"
               name="phone"
-              {...register("phone.0", {
+              {...register("personalDetails.phone.0", {
                 // ... validation rules
               })}
               placeholder="Enter your Phone Number"
@@ -85,15 +85,15 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
 
           {/* secondary Phone Number */}
           <div className="col-md-4">
-            <label className="fw-bold form-label" htmlFor="Secondphone">
+            <label className="fw-bold form-label" htmlFor="phone">
               WhatsApp Number
             </label>
             <input
               type="number"
               className="form-control  border border-1 border-dark"
-              id="Secondphone"
-              name="Secondphone"
-              {...register("phone.1", {
+              id="phone"
+              name="phone"
+              {...register("personalDetails.phone.1", {
                 required: {
                   value: true,
                   message: "Please enter a valid Secondphone Number",
@@ -119,7 +119,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
               type="email"
               className="form-control  border border-1 border-dark"
               id="email"
-              {...register("email", {
+              {...register("personalDetails.email", {
                 required: {
                   value: true,
                   message: "Please enter a valid first Name name",
@@ -143,7 +143,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
               type="number"
               className="form-control  border border-1 border-dark"
               id="pincode"
-              {...register("address.pincode", {
+              {...register("personalDetails.address.pincode", {
                 required: {
                   value: true,
                   message: "Please pincode can't empty",
@@ -168,7 +168,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
               type="city"
               className="form-control  border border-1 border-dark"
               id="city"
-              {...register("address.city", {})}
+              {...register("personalDetails.address.city", {})}
               placeholder="Enter your city "
             />
             <p className=" "> {errors.city?.message}</p>
@@ -180,7 +180,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
               type="country"
               className="form-control  border border-1 border-dark"
               id="country"
-              {...register("address.country", {})}
+              {...register("personalDetails.address.country", {})}
               placeholder="Enter your Country"
             />
             <p className=" "> {errors.country?.message}</p>
@@ -188,7 +188,6 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
           {/* add social media links for connection */}
           <h3> fields social media links </h3>
           <div className=' '>
-
             {socialMediaFields &&
               socialMediaFields?.map((field, index) => {
                 return (
@@ -196,7 +195,7 @@ const PersonalDetails = ({ register, errors, control, getValues }) => {
                     <input
                       type="text"
                       {...register(
-                        ` socialMediaLinks.${index}.links`
+                        `personalDetails.socialMediaLinks.${index}.links`
                       )}
                       className="form-control  border border-1 border-dark my-2"
                     />

@@ -12,6 +12,7 @@ import EduField from "../formDir/eduField";
 import KeySkills from "../formDir/keySkills";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import ProfileImage from "../formDir/ProfileImage";
+import { FormDefaultConfig } from "../formDir/FormDefaultConfig";
 
 export default function ResumeDetailFillForm() {
   const [formCount, setFormCount] = useState(1);
@@ -21,8 +22,7 @@ export default function ResumeDetailFillForm() {
   const templateNumber = searchParams.get('template');
   const navigate = useNavigate();
 
-  // console.log("+ ++ searchParams from preview detail fill page++++++++++++++++++++++++++++",templateNumber )
-
+ 
   const dispath = useDispatch();
 
   const handleformNext = () => {
@@ -43,50 +43,8 @@ export default function ResumeDetailFillForm() {
 
 
 
-  const form = useForm({
-    defaultValues: {
+  const form = useForm(FormDefaultConfig);
 
-      socialMediaLinks: [
-        {
-          links: "",
-        },
-      ],
-      moreExperienceFields: [
-        {
-          experience: "",
-        },
-      ],
-
-      QualificationDegree: [
-        {
-          degree: "",
-        },
-      ],
-      KeySkills: [
-        {
-          skill: "",
-        },
-      ],
-      Keylanguage: [
-        {
-          language: "",
-        },
-      ],
-      Keyhobby: [
-        {
-          Hobby: "",
-        },
-      ],
-      Accomplishment: [
-        {
-          Accomplish: "",
-        },
-      ],
-      age: 0,
-      dateOfBirth: new Date(),
-      image: "",
-    },
-  });
 
   const {
     register,

@@ -52,7 +52,7 @@ const EduField = ({ register, errors, control }) => {
           type="date"
           className="form-control border border-1 border-dark"
           id="schoolStartDate"
-          {...register("schoolStartDate", {
+          {...register("Education.schoolStartDate", {
             required: {
               value: true,
               message: "Please enter School Start Date",
@@ -70,7 +70,7 @@ const EduField = ({ register, errors, control }) => {
           type="date"
           className="form-control border border-1 border-dark"
           id="Education.schoolEndDate"
-          {...register("schoolEndDate", {
+          {...register("Education.schoolEndDate", {
             required: {
               value: true,
               message: "Please enter School  End Date ",

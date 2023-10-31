@@ -114,7 +114,7 @@ const KeySkills = ({ register, control }) => {
             <div key={field.id} className="">
               <input
                 type="text"
-                {...register(`Keyhobby.${index}.Hobby`)}
+                {...register(`KeySkill.Keyhobby.${index}.Hobby`)}
                 className="form-control my-2  border border-1 border-dark"
               />
               {index > 0 && (
