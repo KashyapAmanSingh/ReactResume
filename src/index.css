@@ -68,7 +68,14 @@ padding-bottom: 6rem !important;
   width: 60vw !important;
   padding: 2rem !important;
  }
-
+@media (max-width: 576px) {
+  .Jobtitle,
+  .professionalExperience,
+  .EducationDetails,
+  .KeySkill {
+    width: 100vw; /* Apply custom styles for 'sm' breakpoint */
+  }
+}
 
  /* TemplateThird */
 .TemplateThird{
