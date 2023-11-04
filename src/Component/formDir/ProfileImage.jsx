@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
  
-const ProfileImage = ({ register, errors, getValues ,isDirty}) => {
+const ProfileImage = ({ register, errors, getValues  }) => {
  
     const imageFiles = getValues("personalDetails.image"); // Assuming this is your FileList object
    

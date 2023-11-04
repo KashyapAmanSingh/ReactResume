@@ -19,7 +19,94 @@ import { useSelector } from 'react-redux';
 function ResumeTemplateFirst() {
   const data = useSelector((state) => state.user.UserData);
   console.log(data,"😜😜😜😜😜😜data from   ResumeTemplateFirst");
+  const {
+    KeySkill: { KeySkills, Accomplishment, Keyhobby, Keylanguages },
+    personalDetails: {
+      address: { city, country, pincode },
+      email,
+      firstName,
+      image,
+      jobTitle,
+      lastName,
+      phone,
+      socialMediaLinks,
+    },
+    moreExperienceFields,
+  } = data;
 
+
+
+  console.log("KeySkills:", KeySkills);
+console.log("Accomplishment:", Accomplishment);
+console.log("Keyhobby:", Keyhobby);
+console.log("Keylanguages:", Keylanguages);
+console.log("city:", city);
+console.log("country:", country);
+console.log("pincode:", pincode);
+console.log("email:", email);
+console.log("firstName:", firstName);
+console.log("image:", image);
+console.log("jobTitle:", jobTitle);
+console.log("lastName:", lastName);
+console.log("phone:", phone);
+console.log("socialMediaLinks:", socialMediaLinks);
+console.log("moreExperienceFields:", moreExperienceFields);
+
+
+
+
+KeySkills.map((skill, index) => {
+  console.log(`KeySkill ${index + 1}:`, skill.skill);
+});
+
+
+Accomplishment.map((accomplish, index) => {
+  console.log(`Accomplishment ${index + 1}:`, accomplish.Accomplish);
+});
+
+Keyhobby.map((hobby, index) => {
+  console.log(`Hobby ${index + 1}:`, hobby.Hobby);
+});
+
+// Map and log Keylanguages
+Keylanguages.map((language, index) => {
+  console.log(`Language ${index + 1}:`, language.language);
+});
+
+moreExperienceFields.map((experienc, index) => {
+  // const {
+  //   companyName,
+  //   currently,
+  //   endDate,
+  //   experience,
+  //   positionTitle,
+  //   startDate,
+  //   workSummary,
+  // } = experienc;
+
+  // console.log(`Experience ${index + 1}:`);
+  // console.log("Company Name:", companyName);
+  // console.log("Currently Employed:", currently);
+  // console.log("End Date:", endDate);
+  // console.log("Experience:", experience);
+  // console.log("Position Title:", positionTitle);
+  // console.log("Start Date:", startDate);
+  // console.log("Work Summary:", workSummary);
+});
+
+
+
+phone.map((number, index) => {
+  console.log(`Phone ${index + 1}:`, number);
+});
+
+// Map and log social media links
+socialMediaLinks.map((link, index) => {
+  console.log(`Social Media Link ${index + 1}:`, link.links);
+});
+
+ 
+ 
   return (
     <div className="container ">
       <div className="row ">
@@ -123,14 +210,7 @@ function ResumeTemplateFirst() {
                     {" "}
                     As a software developer at Tech Company Inc., I have been
                     responsible for developing and maintaining web applications
-                    using cutting-edge technologies. My work includes collaborating
-                    As a software developer at Tech Company Inc., I have been
-                    responsible for developing and maintaining web applications
-                    using cutting-edge technologies. My work includes collaborating
-                    with cross-functional teams, writing clean and efficient code,
-                    and ensuring the scalability and performance of our
-                    applications. I also contributed to the design and architecture
-                    of software solut
+                
                   </p>
                 </div>
 
@@ -152,11 +232,7 @@ function ResumeTemplateFirst() {
                     As a software developer at Tech Company Inc., I have been
                     responsible for developing and maintaining web applications
                     using cutting-edge technologies. My work includes collaborating
-                    with cross-functional teams, writing clean and efficient code,
-                    and ensuring the scalability and performance of our
-                    applications. also contributed to the design and architecture of
-                    software solutions, making a positive impact on the company s
-                    projects.
+                  
                   </p>
                 </div>
 

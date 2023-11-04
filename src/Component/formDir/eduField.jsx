@@ -17,7 +17,6 @@ const EduField = ({ register, errors, control }) => {
   return (
     <div className="mt-5 py-3 rounded-4 EducationDetails border border-5 border-info">
 
-      <h1 className='text-center text-center fw-bold py-2 px-1 '> Fill Education Details</h1>
 
       {QualificationDegreeFields &&
         QualificationDegreeFields?.map((field, index) => {
@@ -25,7 +24,10 @@ const EduField = ({ register, errors, control }) => {
           return (
 
             <div key={field.id} className=" ">
+
               <div className='row'>
+              <h1 className='text-center text-center fw-bold py-2 px-1 '> Fill Education Details{index+1}</h1>
+
                 {/* Qualification Degree */}
                 <div className="col-sm-6">
                   <label className="fw-bold form-label " htmlFor="education_field">Qualification Degree</label>
