@@ -47,9 +47,11 @@ function ResumeTemplateFirst() {
         <div className="col-sm-7 mh-200 border border-4 border-info mx-auto my-auto p-0" id="resume-content">
           <div className="row bg-dark mx-0 text-white">
             {/* ResumePicture */}
-            <div className="col-sm-2 my-3">
-              <ResumePicture   image={image}/>
+            {/* rounded-5  rounded rounded-circle */}
+            <div className="col-sm-2 my-auto py-2" >
+              <ResumePicture image={image} customStyle={" rounded-5  rounded rounded-circle border border-2 border-info"} />
             </div>
+
             {/* TopHeading */}
             <div className="col-sm-10">
               <TopHeading firstName={firstName}

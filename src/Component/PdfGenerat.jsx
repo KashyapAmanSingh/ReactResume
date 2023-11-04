@@ -38,8 +38,7 @@ function PDFGenerator() {
     }
   };
 
-  // Function to go back one page
-
+ 
   return (
     <div className="my-5">
       <h4 className="mb-3 text-mute fs-2 ">Enter File Name</h4>
@@ -61,7 +60,7 @@ function PDFGenerator() {
             </button>
 
             <button
-              className="btn btn-warning btn-block"
+              className="btn btn-warning mx-4  "
               onClick={goBackPage}
             >
               Go Back

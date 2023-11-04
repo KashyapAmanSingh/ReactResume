@@ -5,8 +5,8 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { useFieldArray } from 'react-hook-form';
 import ProfileImage from './ProfileImage';
 
-const PersonalDetails = ({ register, errors, control, getValues ,templateNumber  }) => {
- 
+const PersonalDetails = ({ register, errors, control, getValues, templateNumber }) => {
+
 
   const {
     fields: socialMediaFields,
@@ -19,13 +19,13 @@ const PersonalDetails = ({ register, errors, control, getValues ,templateNumber 
   return (
 
     <div className="rounded-4 Jobtitle mt-5 border border-5 border-info rounded-top rounded-bottom">
-    
-    
-    {templateNumber !== "template3" && templateNumber !== "template4" && (
+
+
+      {templateNumber !== "template3" && templateNumber !== "template4" && (
         <ProfileImage register={register} errors={errors} getValues={getValues} />
       )}
       {/* firstName  */}
-       
+
       <div className="row">
         <div className="col-sm-4">
           <label className="fw-bold form-label" htmlFor="firstName">First Name</label>
@@ -227,55 +227,55 @@ const PersonalDetails = ({ register, errors, control, getValues ,templateNumber 
 
         </div>
         {/* add social media links for connection */}
-       
+
         <div className='row py-3'>
- 
-    {socialMediaFields &&
-      socialMediaFields?.map((field, index) => {
-        return (
-          <>        
-          <div key={field.id} className="col-md-8">
-          <label className="fw-bold form-label" htmlFor="country">Social Connection media links  {index+1}</label>
- 
-            <input
-              type="text"
-              {...register(
-                `personalDetails.socialMediaLinks.${index}.links`
-              )}
-              className="form-control  border border-1 border-dark my-2"
-            />
- 
-          </div>
-            <div className='col-sm-2 d-flex justify-content-between align-items-center '>
-          
-            <button
-              type='submit'
-              className="btn btn-info btn btn-info  mx-4 mt-4"
-              onClick={() => appendSocialMedia({ links: "" })}
-            >
-              <AddIcon />
-            </button>
-            {index > 0 && (
-              <button
-                type="button"
-                className="btn btn-danger btn btn-info mx-4 mt-4"
-                onClick={() => removeSocialMedia(index)}
-              >
-                <DeleteForeverIcon />
-              </button>
-            )}
-            </div>
-            </>
-        );
-      })}
- 
+
+          {socialMediaFields &&
+            socialMediaFields?.map((field, index) => {
+              return (
+                <>
+                  <div key={field.id} className="col-md-8">
+                    <label className="fw-bold form-label" htmlFor="country">Social Connection media links  {index + 1}</label>
+
+                    <input
+                      type="text"
+                      {...register(
+                        `personalDetails.socialMediaLinks.${index}.links`
+                      )}
+                      className="form-control  border border-1 border-dark my-2"
+                    />
+
+                  </div>
+                  <div className='col-sm-2 d-flex justify-content-between align-items-center '>
+
+                    <button
+                      type='submit'
+                      className="btn btn-info btn btn-info  mx-4 mt-4"
+                      onClick={() => appendSocialMedia({ links: "" })}
+                    >
+                      <AddIcon />
+                    </button>
+                    {index > 0 && (
+                      <button
+                        type="button"
+                        className="btn btn-danger btn btn-info mx-4 mt-4"
+                        onClick={() => removeSocialMedia(index)}
+                      >
+                        <DeleteForeverIcon />
+                      </button>
+                    )}
+                  </div>
+                </>
+              );
+            })}
 
 
-  
 
 
-  
-</div>
+
+
+
+        </div>
 
       </div>
       {/* Address City */}

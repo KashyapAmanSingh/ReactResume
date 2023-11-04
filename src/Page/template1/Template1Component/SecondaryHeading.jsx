@@ -6,7 +6,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 const SecondaryHeading = ({ email, phone }) => {
     return (
         <div>
-            <div className="contact_stripe d-flex bg-success text-center small justify-content-evenly">
+            <div className="contact_stripe py-1 d-flex bg-success text-center small justify-content-evenly ">
                 <span>
                     <LocalPhoneRoundedIcon />{phone[0]}
                 </span>
