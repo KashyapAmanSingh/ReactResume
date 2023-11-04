@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { DevTool } from "@hookform/devtools";
+// import { DevTool } from "@hookform/devtools";
 import { addUserData } from "../../redux/Slice";
 import SideBar from "../formDir/sideBar";
 import PersonalDetails from "../formDir/personalDetails";
@@ -121,8 +121,8 @@ export default function ResumeDetailFillForm() {
 
         </div>
       </div>
-      <DevTool control={control} />
+      {/* <DevTool control={control} /> */}
     </div>
   );
 }
-{/* <DevTool control={control} />   */ }
+// {/* <DevTool control={control} />   */ }
