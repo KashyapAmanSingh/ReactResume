@@ -6,10 +6,11 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 const ResumeTemplateThird = () => {
+
     return (
         <div className='d-flex justify-content-start'>
             <div className="container">
-
+<h1>Third Resume</h1>
                 <div className="row ">
                     <div className="col-sm-9 mb-5">
                         <div className="TemplateThird mx-5 mb-5  border border-3  border-success" id='resume-content'>

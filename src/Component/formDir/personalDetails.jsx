@@ -5,9 +5,8 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { useFieldArray } from 'react-hook-form';
 import ProfileImage from './ProfileImage';
 
-const PersonalDetails = ({ register, errors, control, getValues   }) => {
-
-
+const PersonalDetails = ({ register, errors, control, getValues ,templateNumber  }) => {
+ 
 
   const {
     fields: socialMediaFields,
@@ -20,8 +19,11 @@ const PersonalDetails = ({ register, errors, control, getValues   }) => {
   return (
 
     <div className="rounded-4 Jobtitle mt-5 border border-5 border-info rounded-top rounded-bottom">
-      <ProfileImage register={register} errors={errors} getValues={getValues} />
-
+    
+    
+    {templateNumber !== "template3" && templateNumber !== "template4" && (
+        <ProfileImage register={register} errors={errors} getValues={getValues} />
+      )}
       {/* firstName  */}
        
       <div className="row">

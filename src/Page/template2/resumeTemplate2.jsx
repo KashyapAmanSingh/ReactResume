@@ -9,10 +9,9 @@ import SchoolIcon from '@mui/icons-material/School';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import DescriptionIcon from '@mui/icons-material/Description';
-import ImageIcon from '@mui/icons-material/Image';
-import LinkIcon from '@mui/icons-material/Link';
+ import LinkIcon from '@mui/icons-material/Link';
 import { useSelector } from 'react-redux';
-
+import  resumeProfile1  from "../../assets/image/resumeProfile.jpg"
 
 
 const PDFGenerator = lazy(() => import("../../Component/PdfGenerat"));
@@ -24,14 +23,15 @@ function ResumeTemplateSecond() {
   return (
     <>
       <div className="container TemplateSecond2 ">
-      <div id="resume-content" className=' border border-5 border-success '>
+       <div id="resume-content" className=' border border-5 border-success '>
        <div  className="row m-0">
             <div className="col-sm-3 bg-warning ">
             <div
-                className="bg-danger mt-4 mb-2 mx-2"
+                className="bg-danger mt-4 mb-2 mx-2 rounded-5 img-fluid"
                 style={{ width: "8rem", height: "10rem" }}
               >
-                <ImageIcon className="pb-4" style={{ fontSize: "8rem" }} />
+ 
+                <img src={resumeProfile1} alt="Template2 Image"  className='rounded-4 img-fluid' style={{ width: "9rem", height: "10rem" }}/>
               </div>
 
               <h5 className='mx-1'><HomeIcon className="mb-1"/>Address</h5>

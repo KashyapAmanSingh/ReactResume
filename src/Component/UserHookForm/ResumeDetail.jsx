@@ -82,6 +82,7 @@ export default function ResumeDetailFillForm() {
                 control={control}
                 isDirty={isDirty}
                 getValues={getValues}
+                templateNumber={templateNumber}
               />
             ) : formCount === 2 ? (
               <ProfExp register={register} errors={errors} control={control} />
