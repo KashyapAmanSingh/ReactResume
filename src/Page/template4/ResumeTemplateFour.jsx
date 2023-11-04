@@ -5,7 +5,72 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { useSelector } from 'react-redux';
 const ResumeTemplateFour = () => {
+    const data = useSelector((state) => state.user.UserData);
+    console.log(data, "😜😜😜😜😜😜data from   ResumeTemplateFirst");
+    const {
+      KeySkill: { KeySkills, Accomplishment, Keyhobby, Keylanguages },
+      personalDetails: {
+        address: { city, country, pincode },
+        email,
+        firstName,
+        image,
+        jobTitle,
+        lastName,
+        phone,
+        socialMediaLinks,
+      },
+      moreExperienceFields,
+    } = data;
+  
+  
+  
+    console.log("KeySkills:", KeySkills);
+    console.log("Accomplishment:", Accomplishment);
+    console.log("Keyhobby:", Keyhobby);
+    console.log("Keylanguages:", Keylanguages);
+    console.log("city:", city);
+    console.log("country:", country);
+    console.log("pincode:", pincode);
+    console.log("email:", email);
+    console.log("firstName:", firstName);
+    console.log("image:", image);
+    console.log("jobTitle:", jobTitle);
+    console.log("lastName:", lastName);
+    console.log("phone:", phone);
+    console.log("socialMediaLinks:", socialMediaLinks);
+    console.log("moreExperienceFields:", moreExperienceFields);
+  
+  
+  
+    KeySkills.map((skill, index) => {
+      console.log(`KeySkill ${index + 1}:`, skill.skill);
+    });
+  
+  
+    Accomplishment.map((accomplish, index) => {
+      console.log(`Accomplishment ${index + 1}:`, accomplish.Accomplish);
+    });
+  
+    Keyhobby.map((hobby, index) => {
+      console.log(`Hobby ${index + 1}:`, hobby.Hobby);
+    });
+  
+    // Map and log Keylanguages
+    Keylanguages.map((language, index) => {
+      console.log(`Language ${index + 1}:`, language.language);
+    });
+  
+  
+  
+  
+  
+    // Map and log social media links
+    socialMediaLinks.map((link, index) => {
+      console.log(`Social Media Link ${index + 1}:`, link.links);
+    });
+ 
     return (
         <div className='d-flex justify-content-start'>
             <div className="container">
