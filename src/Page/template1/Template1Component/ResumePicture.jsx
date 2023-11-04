@@ -1,14 +1,21 @@
 /* eslint-disable react/prop-types */
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-const ResumePicture = ({image}) => {
-    console.log("ResumePicture from the separate Component", image);
+const ResumePicture = ({ image }) => {
+
     return (
         <div>
+
             <span
-                className="bg-danger mx-5 py-1 rounded rounded-circle d-flex justify-content-center align-items-middle"
-                style={{ width: "6rem", height: "6rem" }}
+                className=" "
+
             >
-                <AccountCircleIcon className="pb-4" style={{ fontSize: "7rem" }} />
+                {image ? (
+                    <img className=" rounded-5 mx-4 rounded rounded-circle" src={URL.createObjectURL(image[0])} alt="" style={{ width: "7rem", height: "7rem" }} />
+                ) : (
+                    <AccountCircleIcon className="bg-danger mx-5 pb-4 rounded-5  rounded rounded-circle py-1  d-flex justify-content-center align-items-middle " style={{ fontSize: "7rem" }} />
+                )}
+
+
             </span>
 
         </div>
