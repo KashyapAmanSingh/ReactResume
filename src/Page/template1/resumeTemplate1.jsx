@@ -1,280 +1,103 @@
-import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
- import AccountCircleIcon from "@mui/icons-material/AccountCircle";
- import { Suspense, lazy } from "react";
-import HomeIcon from '@mui/icons-material/Home';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import SchoolIcon from '@mui/icons-material/School';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import DescriptionIcon from '@mui/icons-material/Description';
-import LinkIcon from '@mui/icons-material/Link';
+import { Suspense, lazy } from "react";
 const PDFGenerator = lazy(() => import("../../Component/PdfGenerat"));
 import { useSelector } from 'react-redux';
+import Education from "./Template1Component/Education";
+import ProfessionalExperience from "./Template1Component/ProfessionalExperience";
+import Skills from "./Template1Component/Skills";
+import Language from "./Template1Component/Language";
+import Hobby from "./Template1Component/Hobby";
+import Links from "./Template1Component/Links";
+import Address from "./Template1Component/Address";
+import TopHeading from "./Template1Component/TopHeading";
+import SecondaryHeading from "./Template1Component/SecondaryHeading";
+import ResumePicture from "./Template1Component/ResumePicture";
 
- 
+
 
 function ResumeTemplateFirst() {
   const data = useSelector((state) => state.user.UserData);
-  console.log(data,"😜😜😜😜😜😜data from   ResumeTemplateFirst");
+  console.log(data, "😜😜😜😜😜😜data from   ResumeTemplateFirst");
   const {
     KeySkill: { KeySkills, Accomplishment, Keyhobby, Keylanguages },
     personalDetails: {
-      address: { city, country, pincode },
+      address,
       email,
       firstName,
-      image,
       jobTitle,
       lastName,
+      image,
+
       phone,
       socialMediaLinks,
     },
     moreExperienceFields,
+    QualificationDegree
   } = data;
 
 
 
-  console.log("KeySkills:", KeySkills);
-console.log("Accomplishment:", Accomplishment);
-console.log("Keyhobby:", Keyhobby);
-console.log("Keylanguages:", Keylanguages);
-console.log("city:", city);
-console.log("country:", country);
-console.log("pincode:", pincode);
-console.log("email:", email);
-console.log("firstName:", firstName);
-console.log("image:", image);
-console.log("jobTitle:", jobTitle);
-console.log("lastName:", lastName);
-console.log("phone:", phone);
-console.log("socialMediaLinks:", socialMediaLinks);
-console.log("moreExperienceFields:", moreExperienceFields);
+  Accomplishment.map((accomplish, index) => {
+    console.log(`Accomplishment ${index + 1}:`, accomplish.Accomplish);
+  });
 
 
-
-
-KeySkills.map((skill, index) => {
-  console.log(`KeySkill ${index + 1}:`, skill.skill);
-});
-
-
-Accomplishment.map((accomplish, index) => {
-  console.log(`Accomplishment ${index + 1}:`, accomplish.Accomplish);
-});
-
-Keyhobby.map((hobby, index) => {
-  console.log(`Hobby ${index + 1}:`, hobby.Hobby);
-});
-
-// Map and log Keylanguages
-Keylanguages.map((language, index) => {
-  console.log(`Language ${index + 1}:`, language.language);
-});
-
-moreExperienceFields.map((experienc, index) => {
-  // const {
-  //   companyName,
-  //   currently,
-  //   endDate,
-  //   experience,
-  //   positionTitle,
-  //   startDate,
-  //   workSummary,
-  // } = experienc;
-
-  // console.log(`Experience ${index + 1}:`);
-  // console.log("Company Name:", companyName);
-  // console.log("Currently Employed:", currently);
-  // console.log("End Date:", endDate);
-  // console.log("Experience:", experience);
-  // console.log("Position Title:", positionTitle);
-  // console.log("Start Date:", startDate);
-  // console.log("Work Summary:", workSummary);
-});
-
-
-
-phone.map((number, index) => {
-  console.log(`Phone ${index + 1}:`, number);
-});
-
-// Map and log social media links
-socialMediaLinks.map((link, index) => {
-  console.log(`Social Media Link ${index + 1}:`, link.links);
-});
-
- 
- 
   return (
     <div className="container ">
       <div className="row ">
         <div className="col-sm-7 mh-200 border border-4 border-info mx-auto my-auto p-0" id="resume-content">
-           <div className="row bg-dark mx-0 text-white">
+          <div className="row bg-dark mx-0 text-white">
+            {/* ResumePicture */}
             <div className="col-sm-2 my-3">
-              <span
-                className="bg-danger mx-5 py-1 rounded rounded-circle d-flex justify-content-center align-items-middle"
-                style={{ width: "6rem", height: "6rem" }}
-              >
-                <AccountCircleIcon className="pb-4" style={{ fontSize: "7rem" }} />
-              </span>
+              <ResumePicture   image={image}/>
             </div>
-
+            {/* TopHeading */}
             <div className="col-sm-10">
-              <div className="text-center">
-                <h3 className="fs-1 mt-4 fw-medium">Mr. Fresher</h3>
-                <h5 className="fs-4 my-1 fw-medium">SoftWare Developer</h5>
-              </div>
+              <TopHeading firstName={firstName}
+                jobTitle={jobTitle}
+                lastName={lastName} />
             </div>
           </div>
+          {/* SecondaryHeading */}
           <div className="row ">
             <div className="col-sm-12 ">
-              <div className="contact_stripe d-flex bg-success text-center small justify-content-evenly">
-                <span>
-                  <LocalPhoneRoundedIcon /> 1234567890
-                </span>
-                <span>
-                  <WhatsAppIcon /> 9876543210
-                </span>
-                <span>
-                  <MailOutlineIcon /> fresher.mr@.com
-                </span>
-              </div>
+              <SecondaryHeading email={email}
+                phone={phone} />
             </div>
 
           </div>
           <div className="row mx-0 my-0"  >
             <div className="col-sm-3 bg-info">
-              <h5 className="mt-1 ">
-                <HomeIcon className="mb-1" color="dark" />
-              Address</h5>
-              <p className="d-flex ">Your City Your Country Your Pincode</p>
-              <h5><LinkIcon />Links</h5>
-              <ul>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-decoration-none text-dark"
-                  >
-                  <LinkedInIcon/>  LinkedIn
-                  </a>
-                </li>
+              <Address address={address} />
 
-                <li  >
-                  <a
-                    href="https://twitter.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-decoration-none text-dark"
-                  >
-                 <TwitterIcon/>Twitter
-                  </a>
-                </li>
-                <li>Discord: Your Discord Profile</li>
-              </ul>
-              <div className="Education">
-                <h5>Educational Details</h5>
-          
-                  <SchoolIcon/>School Name
-                  <br />
-                  <p className="d-flex small"><CalendarMonthIcon/> Start-End Date or Ongoing </p>
-               
+              {/* Connections Links  */}
+              <Links socialMediaLinks={socialMediaLinks} />
 
-                <p className="m-0"><WorkspacePremiumIcon/>Degree Field </p>
-                <p className="d-flex small"> Start-End Date or Ongoing </p>
+              {/* education field  */}
+              <Education QualificationDegree={QualificationDegree} />
 
-                <p className="small text-center">
-                  <DescriptionIcon/>Description: Describe your degree, achievements, or any additional
-                  details about your education.
-                </p>
-              </div>
             </div>
 
+            {/* ProfessionalExperience fields */}
             <div className="col-sm-9">
-              {/* Your content for the right part of the row */}
-              <div className="professionalExp">
-                <h3 className="fw-bold mt-2">Professional Experience 1</h3>
-                <div className="experience">
-                  <div className="d-flex   text-center align-middle">
-                    <h6 className="m-0">Position Title</h6>
-                    <h6 className="text-info fw-bold mx-2">at</h6>
-                    <h6 className="m-0 fw-medium">Company Name.</h6>
-                  </div>
+              < ProfessionalExperience moreExperienceFields={moreExperienceFields} />
 
-                  <p className="small m-0"><CalendarMonthIcon/>Start Date - End Date or Ongoing</p>
-                  <h6 className="my-1">Summary</h6>
-                  <p className="text-center">
-                    {" "}
-                    As a software developer at Tech Company Inc., I have been
-                    responsible for developing and maintaining web applications
-                
-                  </p>
-                </div>
+              {/* KeySkills */}
+              <Skills KeySkills={KeySkills} />
 
-                {/* Add more professional experience items here */}
-              </div>
-              <div className="professionalExp">
-                <h3 className="fw-bold">Professional Experience</h3>
-                <div className="experience  ">
-                  <div className="d-flex   text-center align-middle">
-                    <h6 className="m-0">Software Developer</h6>
-                    <h6 className="text-info fw-bold mx-2">at</h6>
-                    <h6 className="m-0 fw-medium">Tech Company Inc.</h6>
-                  </div>
-                  <p className="small m-0"> <CalendarMonthIcon/>Start Date - End Date or Ongoing</p>
+              {/* Keylanguages */}
+              <Language Keylanguages={Keylanguages} />
 
-                  <h6 className="my-1 fw-bold">Summary</h6>
-                  <p className="text-center">
-                    {" "}
-                    As a software developer at Tech Company Inc., I have been
-                    responsible for developing and maintaining web applications
-                    using cutting-edge technologies. My work includes collaborating
-                  
-                  </p>
-                </div>
+              {/* Keyhobby */}
+              <Hobby Keyhobby={Keyhobby} />
 
-                {/* Add more professional experience items here */}
-              </div>
-
-              <div className="skills m-0 d-flex flex-wrap ">
-                <h3 className=" fs-4 p-0 mt-0 mb-0 skill-h">Skills</h3>
-                <p className="my-1  fw-medium ">JavaScript,</p>
-                <p className="my-1  fw-medium ">Bootstrap,</p>
-                <p className="my-1  fw-medium ">CSS,</p>
-                <p className="my-1   fw-medium ">HTML,</p>
-                <p className="my-1  fw-medium ">Bootstrap,</p>
-
-                {/* Add more skills as needed */}
-              </div>
-
-              <div className="lang m-0 ">
-                <div className="d-flex my-2 flex-wrap ">
-                  <h3 className="Languages-h fs-4">Language</h3>
-
-                  <p className="my-auto   fw-medium  ">Hindi,</p>
-                  <p className="my-auto   fw-medium">French,</p>
-                  <p className="my-auto fw-medium">Spanish</p>
-                </div>
-              </div>
-
-              <div className="hobby m-0 d-flex flex-wrap ">
-                <h3 className="Hobbies-h  fs-4">Hobbies</h3>
-                <p className="my-auto my-auto fw-medium ">
-                  reading,running,boxing etc
-                </p>
-              </div>
             </div>
           </div>
         </div>
-
         <div className="col-sm-3  ">
 
-        <Suspense fallback={<div>Loading...</div>}>
-                                <PDFGenerator />
-                            </Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
+            <PDFGenerator />
+          </Suspense>
         </div>
       </div>
     </div>
