@@ -1,6 +1,5 @@
  import { useSearchParams } from 'react-router-dom';
 
- 
 // Import resume templates for different templates
  import ResumeTemplateFirst from '../Component/Templates/template1/resumeTemplate1';
 import ResumeTemplateSecond from '../Component/Templates/template2/resumeTemplate2';
@@ -21,7 +20,7 @@ const  Preview = () => {
     template3: <ResumeTemplateThird  />,
     template4: <ResumeTemplateFour/>,  };
 
-    
+
   // Select the template component based on the template number from the URL
    const TemplateComponent = templates[templateNumber] || null;
 
