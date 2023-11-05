@@ -1,5 +1,4 @@
-![Screenshot (471)](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/711287c4-c41d-40c9-b6fc-0b52dcb0421d)# Frontend Resume Builder Capstone Project
- 
+
 
 # Resume-Builder
 
