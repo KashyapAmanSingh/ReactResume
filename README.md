@@ -9,6 +9,12 @@ Currently, two official plugins are available:
 # ReactResume
 # Code Tree Structure
 
+#Components and Pages of Application:
+ 
+Template Selection: This feature allows users to select the template that they want.
+![Sample Resume](https://example.com/sample_resume.png)
+
+
 ```├───public
 │       vite.svg
 │
