@@ -9,8 +9,8 @@ const ResumePicture = ({ image ,customStyle}) => {
                 className=" "
             >
                 {image ? (
-                    <img className={`${customStyle}`} src={URL.createObjectURL(image[0])} alt="" // rounded-5 mx-4 rounded rounded-circle
-                        style={{ maxWidth: "100%", maxHeight: "30%" }}
+                    <img className={`${customStyle}`} src={URL.createObjectURL(image[0])} alt=""  
+                        style={{ maxWidth: "150%", maxHeight: "30%" }}
 
                     />
                 ) : (

@@ -1,6 +1,4 @@
- 
- 
-  .resume3container{
+ .resume3container{
   width: 70vw !important;
  margin-left:18vw !important;
 height:auto !important;
@@ -11,18 +9,8 @@ padding-bottom: 6rem !important;
  .skill-h {
  margin-right: 4.1rem !important;
 }
-.Languages-h {
- margin-right: 1rem !important;
-}
-.Hobbies-h {
- margin-right: 1.9rem !important;
-}
-.contact_stripe {
- width: 100%;
- margin: 0;
- padding: 0;
-}  
-
+ 
+ 
 /* end template start  */
  .main_header {
  border-bottom: 0.8rem solid #000;  
@@ -45,7 +33,7 @@ padding-bottom: 6rem !important;
 }
 
 .card-overlay {
- background: rgba(255, 118, 105, 0.8);
+ background: rgba(159, 62, 53, 0.8);
  opacity: 0; /* Initially hidden */
 
  transition: opacity 0.3s;

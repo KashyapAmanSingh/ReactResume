@@ -48,7 +48,7 @@ function ResumeTemplateFirst() {
           <div className="row bg-dark mx-0 text-white">
             {/* ResumePicture */}
             {/* rounded-5  rounded rounded-circle */}
-            <div className="col-sm-2 my-auto py-2" >
+            <div className="col-sm-2 my-auto  " >
               <ResumePicture image={image} customStyle={" rounded-5  rounded rounded-circle border border-2 border-info"} />
             </div>
 
