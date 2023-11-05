@@ -1,5 +1,4 @@
-# Frontend Resume Builder Capstone Project
- 
+
 
 # Resume-Builder
 
@@ -122,29 +121,27 @@ For testing, we've incorporated Jest to ensure the reliability and accuracy of t
             Slice.jsx
             Store.jsx
 ```
- 
 
 # Components and Pages of Application:
  
 ## Template Selection:
--This feature allows users to select the template that they want.
-![mainHome](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/mainHome.png)
-
+-This feature allows users to select the template that they want. 
+![mainHome](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/4e5300a3-8a6a-4a13-bcb9-48e04aada93b)
 
 ## sideBarr: 
 - This section allows users to Navigate 
-![Side Bar](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/sideBarr.png)
- 
+  ![Side Bar](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/94990d51-dcb1-49da-a3df-103c887de470)
 
 ## Information Entry Page: 
 - This section allows users to enter their qualifications, employment history, education, and personal data.
-![Information Entry](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/formDetailFill.png)
+  ![Information Entry](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/9741edfe-2757-4cdb-9782-25def261f44a)
 
-  
+
 
 ## Preview Page: 
 - Users can view their completed resume in its final format in this component. After completing all the required information, they can download the resume in PDF format by clicking the "Generate Pdf" button.
-![Preview Page](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/PreviewFinal.png)
+![Preview Page](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/f94e8a32-2525-4971-88fd-8f043b54b040)
+
 
 ##File_Downloaded: 
 
@@ -152,15 +149,17 @@ For testing, we've incorporated Jest to ensure the reliability and accuracy of t
  
 ## AboutUs: 
 
-![AboutUs](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/About.png)
- 
+![AboutUs](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/79860fda-7e70-4c84-8734-4d02ce1ffdb0)
+
+
+
+
 #Project Access Links :
-- Deployment link:https://react-resume-6dil-aiae27gra-kashyapamansingh.vercel.app/
+- Deployment link: https://react-resume-6dil-kkzvibtdt-kashyapamansingh.vercel.app/
 - YouTube link:https://www.youtube.com/watch
  
  # Team Members:-
  - Completed Individually
-
 
 
 
