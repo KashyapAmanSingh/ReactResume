@@ -8,16 +8,16 @@ import SchoolTwoToneIcon from "@mui/icons-material/SchoolTwoTone";
 const SideBar = ({ formCount }) => {
   return (
     <div>
-      <div className="border border-4 border-dark mx-3">
+      <div className="border border-4 border-dark ">
         <h5
-          className={`px-3  py-1 m-0 border-4 fw-bold   border-bottom  border-dark ${
+          className={`px-3 py-1 m-0 border-4 fw-bold   border-bottom fs-5  border-dark ${
             formCount === 1 ? "bg-secondary text-white" : ""
           }`}
         >
           <AccountBoxTwoToneIcon /> Personal Info
         </h5>
         <h5
-          className={`px-3  py-1 m-0 border-4 fw-bold text-dark border-bottom border-dark ${
+          className={`px-3  py-1 m-0 border-4 fw-bold text-dark fs-5 border-bottom border-dark ${
             formCount === 2 ? "bg-secondary text-white" : ""
           }`}
         >
@@ -25,7 +25,7 @@ const SideBar = ({ formCount }) => {
         </h5>
 
         <h5
-          className={` px-3  py-1 m-0 border-4 text-dark fw-bold border-bottom border-dark ${
+          className={` px-3  py-1 m-0 border-4 text-dark fs-5 fw-bold border-bottom border-dark ${
             formCount === 3 ? "bg-secondary text-white" : ""
           }`}
         >
@@ -34,7 +34,7 @@ const SideBar = ({ formCount }) => {
         </h5>
 
         <h5
-          className={`px-3  border-4 m-0 py-1 text-dark fw-bold border-dark ${
+          className={`px-3  border-4 m-0 py-1 text-dark fs-5 fw-bold border-dark ${
             formCount === 4 ? "bg-secondary text-white" : ""
           }`}
         >

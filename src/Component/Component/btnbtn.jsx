@@ -22,10 +22,7 @@ function PDFGenerator() {
 
     if (typeof window !== "undefined") {
       const resumeContent = document.getElementById("resume-content");
-      console.log(
-        resumeContent,
-        "+++++++++++++++++++++++++==----------------------------------------------------------------"
-      );
+    
       html2canvas(resumeContent).then((canvas) => {
         const imgData = canvas.toDataURL("image/png");
 

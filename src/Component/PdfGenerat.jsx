@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { useNavigation } from "react-router-dom"; // Import the useRouter from next/router
+import   { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import the useRouter from next/router
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
 function PDFGenerator() {
   const [fileName, setFileName] = useState("");
-  const router = useNavigation(); // Initialize the router
-
+  const navigate = useNavigate();
   const goBackPage = () => {
-    router.back();
+    navigate(-1);
+
   };
 
   const handleFileNameChange = (e) => {
@@ -37,11 +37,10 @@ function PDFGenerator() {
     }
   };
 
-  // Function to go back one page
-
+ 
   return (
     <div className="my-5">
-      <h4 className="mb-3 text-mute fs-2 ">Enter Resume File Name</h4>
+      <h4 className="mb-3 text-mute fs-2 ">Enter File Name</h4>
       <div className="container">
         <div className="row">
           <input
@@ -60,7 +59,7 @@ function PDFGenerator() {
             </button>
 
             <button
-              className="btn btn-warning btn-block"
+              className="btn btn-warning mx-4  "
               onClick={goBackPage}
             >
               Go Back
