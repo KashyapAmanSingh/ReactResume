@@ -12,7 +12,7 @@ Currently, two official plugins are available:
 #Components and Pages of Application:
  
 Template Selection: This feature allows users to select the template that they want.
-![Sample Resume](https://example.com/sample_resume.png)
+![Sample Resume](https://marketplace.canva.com/EAFRuCp3DcY/1/0/1131w/canva-black-white-minimalist-cv-resume-f5JNR-K5jjw.jpg)
 
 
 ```├───public
