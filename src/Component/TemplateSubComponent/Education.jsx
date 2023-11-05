@@ -13,6 +13,7 @@ const Education = ({ QualificationDegree }) => {
                 <h5>Educational Details</h5>
 
                 {QualificationDegree.map((qualification, index) => {
+                    // destructuring the QualificationDegree 
                     const {
                         currently,
                         degree,

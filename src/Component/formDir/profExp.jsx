@@ -3,8 +3,11 @@
 import AddIcon from '@mui/icons-material/Add';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { useFieldArray } from 'react-hook-form';
-
+ 
+// preofessional experience filling component
 const ProfExp = ({ register, errors, control }) => {
+
+  // field array for multiple fields 
   const {
     fields: ExperienceFields,
     append: appendmoreExperience,
@@ -19,17 +22,13 @@ const ProfExp = ({ register, errors, control }) => {
   return (
 
     <div className="professionalExperience mt-5 py-2 border border-5 border-info rounded-top rounded-bottom">
-
- 
         {ExperienceFields &&
-
-          ExperienceFields?.map((field, index) => {
-            
-            return (
-              
+          ExperienceFields?.map((field, index) => {     
+            return (        
               <div key={field.id} className=" ">
                       <h1 className="fw-bold mb-4 text-center">Professional Experience {index+1}</h1> 
-                <div className='row'>
+                <div className='row'>                                    
+           {/* Position Title section of input field  */}
                   <div className="col-sm-6">
                     <label className="fw-bold form-label" htmlFor="positionTitle">Position Title:</label>
                     <input
@@ -50,6 +49,8 @@ const ProfExp = ({ register, errors, control }) => {
 
                   </div>
 
+                             
+                             {/* company name section of input field  */}
                   <div className="col-sm-6">
                     <label className="fw-bold form-label" htmlFor="companyName">Company Name:</label>
                     <input
@@ -69,6 +70,8 @@ const ProfExp = ({ register, errors, control }) => {
 
                   </div>
 
+                             
+                             {/*Start Date  section of input field  */}
                   <div className="col-sm-6">
                     <label className="fw-bold form-label" htmlFor="startDate"> Start Date </label>
                     <input
@@ -88,6 +91,8 @@ const ProfExp = ({ register, errors, control }) => {
 
                   </div>
 
+                             
+                             {/* End Date section of input field  */}
                   <div className="col-sm-6">
                     <label className="fw-bold form-label" htmlFor="endDate"> End Date </label>
                     <input
@@ -114,6 +119,8 @@ const ProfExp = ({ register, errors, control }) => {
  
                   </div>
                   
+                             
+                             {/*Work Summary section of input field  */}
                   <div className="col-sm-6 mt-1">
                     <label className="fw-bold form-label" htmlFor="workSummary">Work Summary</label>
                     <textarea
@@ -133,6 +140,8 @@ const ProfExp = ({ register, errors, control }) => {
 
                   </div>
 
+                             
+                             {/* Your Experience  section of input field  */}
                   <div className="col-sm-6 mt-1">
                     <label className="fw-bold form-label" htmlFor="Experienc">Your Experience</label>
                     <textarea
@@ -165,6 +174,7 @@ const ProfExp = ({ register, errors, control }) => {
                       className="btn my-2 mx-3 mb-3 btn-danger"
                       onClick={() => removemoreExperience(index)}
                     >
+                      delete button 
                       <DeleteForeverIcon />
 
                     </button>
@@ -180,4 +190,4 @@ const ProfExp = ({ register, errors, control }) => {
  )
 }
 
-export default ProfExp
+export default ProfExp //export tthe Professional component

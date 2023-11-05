@@ -16,7 +16,7 @@ import ResumePicture from "../../TemplateSubComponent/ResumePicture";
 
 function ResumeTemplateFirst() {
   const data = useSelector((state) => state.user.UserData);
-  console.log(data, "😜😜😜😜😜😜data from   ResumeTemplateFirst");
+
   const {
     KeySkill: { KeySkills, Accomplishment, Keyhobby, Keylanguages },
     personalDetails: {

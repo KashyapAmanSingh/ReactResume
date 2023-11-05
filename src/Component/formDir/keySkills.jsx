@@ -46,6 +46,9 @@ const KeySkills = ({ register, control, errors }) => {
       <h1 className='text-center text-center fw-bold py-2 px-1  '> Fill Key Skills Details</h1>
 
       <div className="col-md-6">
+              {/* Section for Adding Key Skills */}
+
+        
         <h4>Add more Skills</h4>
         {KeySkillFields &&
           KeySkillFields?.map((field, index) => (
@@ -61,6 +64,7 @@ const KeySkills = ({ register, control, errors }) => {
                 })}
                 className="form-control my-2  border border-1 border-dark"
               />
+              {/* error showing for respective field  */}
                  <p className="text-danger">
                 {errors.KeySkill?.KeySkills?.[index]?.skill?.message}
               </p>
@@ -87,6 +91,8 @@ const KeySkills = ({ register, control, errors }) => {
       </div>
 
       <div className="col-md-6">
+              {/* Section for Adding languages */}
+
         <h4>Add languages</h4>
         {KeylanguagesField &&
           KeylanguagesField?.map((field, index) => (
@@ -102,6 +108,7 @@ const KeySkills = ({ register, control, errors }) => {
                 })}
                 className="form-control my-2  border border-1 border-dark"
               />
+              {/* error showing for respective field  */}
                   <p className="text-danger">
                 {errors.KeySkill?.Keylanguages?.[index]?.language?.message}
               </p>
@@ -126,9 +133,9 @@ const KeySkills = ({ register, control, errors }) => {
 
       </div>
 
-      {/* HOBBY FIELD  */}
-
+               {/* Section for  HOBBY FIELD */}
       <div className=" col-md-6">
+
         <h4>Add Your Hobby</h4>
         {HobbyFields &&
           HobbyFields?.map((field, index) => (
@@ -153,6 +160,7 @@ const KeySkills = ({ register, control, errors }) => {
                   <DeleteForeverIcon />
                 </button>
               )}
+              {/* error showing for respective field  */}
               <p className="text-danger">
                 {errors.KeySkill?.Keyhobby?.[index]?.Hobby?.message}
               </p>
@@ -166,7 +174,11 @@ const KeySkills = ({ register, control, errors }) => {
         </button>
       </div>
 
+
+              {/* Section for Adding Extra Accomplishments */}
+
       <div className=" col-md-6">
+
         <h4>Add Extra Accomplishments</h4>
         {AccomplishmentFields &&
           AccomplishmentFields?.map((field, index) => (
@@ -190,6 +202,7 @@ const KeySkills = ({ register, control, errors }) => {
                   <DeleteForeverIcon />
                 </button>
               )}
+              {/* error showing for respective field  */}
                  <p className="text-danger">
                 {errors.KeySkill?.Accomplishment?.[index]?.Accomplish?.message}
               </p>
@@ -202,6 +215,8 @@ const KeySkills = ({ register, control, errors }) => {
           <AddIcon />
         </button>
       </div>
+
+      {/* form submit button  */}
       <div className=" ">
         <button className="btn btn-danger float-end" type="submit"  >
           Submit
@@ -212,4 +227,4 @@ const KeySkills = ({ register, control, errors }) => {
   )
 }
 
-export default KeySkills
+export default KeySkills        //export the key skills component

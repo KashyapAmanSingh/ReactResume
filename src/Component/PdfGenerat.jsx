@@ -5,17 +5,19 @@ import html2canvas from "html2canvas";
 
 function PDFGenerator() {
   const [fileName, setFileName] = useState("");
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Get the navigate function from react-router-dom
 
+  // Function to navigate back to the previous page
   const goBackPage = () => {
     navigate(-1);
 
   };
-
+  // Function to handle changes in the file name input
   const handleFileNameChange = (e) => {
     setFileName(e.target.value);
   };
 
+  // Function to generate a PDF from the HTML content
   const generatePDF = () => {
     const pdf = new jsPDF({
       orientation: "p",
@@ -26,13 +28,15 @@ function PDFGenerator() {
     if (typeof window !== "undefined") {
       const resumeContent = document.getElementById("resume-content");
 
+            // Convert the resume content to an image using html2canvas
       html2canvas(resumeContent).then((canvas) => {
         const imgData = canvas.toDataURL("image/png");
-
+        // Add the image to the PDF
         pdf.addImage(imgData, "PNG", 0, 0, 210, 0);
 
         if (fileName) {
-          pdf.save(fileName + ".pdf");
+          pdf.save(fileName + ".pdf"); // Save the PDF with the specified file name
+
         }
       });
     }

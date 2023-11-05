@@ -1,18 +1,17 @@
 
-import { Link } from 'react-router-dom'
- 
+import { Link } from 'react-router-dom';
+
+ // Import template images
 import resume1 from "../assets/image/Resume1.jpg";
 import resume2 from "../assets/image/resumeSecond.png";
 import resume3 from "../assets/image/ThirdResume.png";
 import resume4 from "../assets/image/ResumeFourth.png";
+// Home component
+
 const Home = () => {
   return (
-    <div>
-      
-   
+    <div>   
       <div className="container">
-
-
       <h1 className="fw-bolder text-center mb-5 mt-0 display-2">
       Explore Our <span className="text-info">Templates</span> and Begin Your 
         <span className="text-info"> Journey</span> 

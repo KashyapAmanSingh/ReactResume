@@ -6,6 +6,8 @@ const ProfessionalExperience = ({moreExperienceFields}) => {
     <div>
               <div className="professionalExp">
                 {moreExperienceFields.map((experience, index) => {
+                            // Destructure the fields from the experience object
+
                   const {
                     companyName,
                     currently,
@@ -32,8 +34,8 @@ const ProfessionalExperience = ({moreExperienceFields}) => {
 
                         </p>
                         <h6 className="my-1">Summary </h6>
-                        <p className="text-center">{workSummary.slice(0, 60)} Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt aliquid voluptates asperiores libero, neque eius sint perferendis animi laboriosam labore maiores quidem nemo odit veniam, minima exercitationem doloribus reiciendis rem! Quia molestias necessitatibus nihil? Officia dolores accusamus blanditiis eaque nulla?  </p>
-                        <p className="text-center">{PersonalExperience.slice(0, 20)} Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nulla necessitatibus soluta ratione libero eligendi nemo omnis quaerat fugiat nihil eius quae, pariatur aliquam dolorem corporis eos atque suscipit neque magnam voluptas harum. Enim facilis saepe minus quidem. Nesciunt, nisi! Nulla quae dolore itaque. Voluptates maxime labore voluptatum velit unde. </p>
+                        <p className="text-center">{workSummary.slice(0, 60)}  </p>
+                        <p className="text-center">{PersonalExperience.slice(0, 20)}  </p>
                       </div>
                     </div>
                   );

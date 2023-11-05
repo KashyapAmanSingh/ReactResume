@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-// import { DevTool } from "@hookform/devtools";
 import { addUserData } from "../../redux/Slice";
 import SideBar from "../formDir/sideBar";
 import PersonalDetails from "../formDir/personalDetails";
@@ -11,7 +10,7 @@ import ProfExp from "../formDir/profExp";
 import EduField from "../formDir/eduField";
 import KeySkills from "../formDir/keySkills";
 import { useNavigate, useSearchParams } from "react-router-dom";
- import { FormDefaultConfig } from "../formDir/FormDefaultConfig";
+import { FormDefaultConfig } from "../formDir/FormDefaultConfig";
 
 export default function ResumeDetailFillForm() {
   const [formCount, setFormCount] = useState(1);
@@ -21,7 +20,7 @@ export default function ResumeDetailFillForm() {
   const templateNumber = searchParams.get('template');
   const navigate = useNavigate();
 
- 
+
   const dispath = useDispatch();
 
   const handleformNext = () => {
@@ -40,25 +39,18 @@ export default function ResumeDetailFillForm() {
     navigate(`Preview?template=${templateNumber}`);
   }
 
-
-
   const form = useForm(FormDefaultConfig);
-
 
   const {
     register,
     control,
     handleSubmit,
-    // watch,
     getValues,
     formState: { errors, isDirty }
   } = form;
-  // const userWatch = watch();
 
 
-  const { name, ref, onChange, onBlur } = register("name");
   const formSubmit = (data) => {
-    // alert("😲😲Submit request works😲😲");
     console.log("😲 😲from handleSubmit ", data);
     dispath(addUserData(data));
   };
@@ -74,7 +66,6 @@ export default function ResumeDetailFillForm() {
         <div className="col-sm-8 ">
           {/* Resume Picture */}
           <form onSubmit={handleSubmit(formSubmit)} noValidate className="row g-3   ">
-            {/* <h3 key={2}>userWatch---{JSON.stringify(userWatch)}</h3> */}
             {formCount === 1 ? (
               <PersonalDetails
                 register={register}
@@ -85,44 +76,46 @@ export default function ResumeDetailFillForm() {
                 templateNumber={templateNumber}
               />
             ) : formCount === 2 ? (
+              // professional experience fields 
               <ProfExp register={register} errors={errors} control={control} />
             ) : formCount === 3 ? (
+              // educational detail filling fields
               <EduField register={register} errors={errors} control={control} />
             ) : formCount === 4 ? (
-
+              //  key skills fillling fields 
               <KeySkills
                 register={register}
                 control={control}
                 errors={errors}
               />
-                   ) : null}
-          </form>
+            ) : null}
 
-          <div className="d-flex mt-4 mb-5  justify-content-center">
-            <button
-              className="btn btn-warning mx-4 my-5"
-              onClick={handleformPrevious}
-              disabled={formCount === 1}
-            >
-              Previous
-            </button>
-            {formCount !== 4 ? (
+
+            <div className="d-flex mt-4 mb-5  justify-content-center">
+              {/* form navigation button  */}
               <button
                 className="btn btn-warning mx-4 my-5"
-                onClick={handleformNext}
-                disabled={formCount === 4}
+                onClick={handleformPrevious}
+                disabled={formCount === 1}
               >
-                Next
-              </button>) : <button type="button  " className="btn btn-danger my-5 mx-5 my-4" onClick={handlePreviewResume} disabled={!templateNumber}>
-              Preview
-            </button>}
+                Previous
+              </button>
+              {formCount !== 4 ? (
+                <button
+                  type="submit"
+                  className="btn btn-warning mx-4 my-5"
+                  onClick={handleformNext}
+                  disabled={formCount === 4}
+                >
+                  Next
+                </button>) : <button type="button  " className="btn btn-danger my-5 mx-5 my-4" onClick={handlePreviewResume} disabled={!templateNumber}>
+                Preview
+              </button>}
 
-          </div>
-
+            </div>
+          </form>
         </div>
       </div>
-      {/* <DevTool control={control} /> */}
     </div>
   );
 }
-// {/* <DevTool control={control} />   */ }

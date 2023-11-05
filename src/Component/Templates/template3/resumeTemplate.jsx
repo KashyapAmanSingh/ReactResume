@@ -13,8 +13,7 @@ import Template34Qualification from './template34Qualification';
 const PDFGenerator = lazy(() => import("../../PdfGenerat"));
 const ResumeTemplateThird = () => {
     const data = useSelector((state) => state.user.UserData);
-    console.log(data, "😜😜😜😜😜😜data from   ResumeTemplateFirst");
-    const {
+     const {
         KeySkill: { KeySkills  },
         QualificationDegree,
         personalDetails: {
@@ -65,28 +64,7 @@ const ResumeTemplateThird = () => {
                                         <h5 className='fs-4 text-success fw-medium'>Education</h5>
                                         <Template34Qualification QualificationDegree={QualificationDegree}/>
 
-
-{/* 
-                                        {QualificationDegree.map((qualification, index) => {
-                                            const {
-                                                currently,
-                                                degree,
-                                                degreeDescription,
-                                                schoolEndDate,
-                                                schoolName,
-                                                schoolStartDate
-                                            } = qualification;
-
-                                            return (
-                                                <div className='mt-2' key={index}>
-                                                    <p className='m-0 p-0'>{degree}</p>
-                                                    <p className='m-0 p-0'>{schoolName}</p>
-                                                    <p className='m-0 p-0'>{degreeDescription.slice(0, 10)}</p>
-                                                    <p className='m-0 p-0'>{`${schoolStartDate} - ${currently ? "Ongoing" : schoolEndDate}`}</p>
-                                                </div>
-                                            );
-                                        })} */}
-
+ 
 
 
                                         {/* <!-- Expertise --> */}

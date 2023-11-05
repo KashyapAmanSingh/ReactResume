@@ -2,6 +2,8 @@
 
 import aboutSvg from "../assets/image/about2.svg";
  
+
+// About component
 const About = () => {
   return (
     <div className="container">
@@ -36,6 +38,7 @@ const About = () => {
           </p>
         </div>
         <div className="col-sm-5 mt-0 pt-4 ">
+          {/* images at left of the section  */}
           <img
             src={aboutSvg}
             height={520}

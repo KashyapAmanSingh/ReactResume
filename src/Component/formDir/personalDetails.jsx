@@ -7,7 +7,7 @@ import ProfileImage from './ProfileImage';
 
 const PersonalDetails = ({ register, errors, control, getValues, templateNumber }) => {
 
-
+          //  storing multiple fields  of links 
   const {
     fields: socialMediaFields,
     append: appendSocialMedia,
@@ -20,30 +20,34 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
 
     <div className="rounded-4 Jobtitle mt-5 border border-5 border-info rounded-top rounded-bottom">
 
-
+          {/* show ProfileImage field if template has option of showing ProfileImage  */}
       {templateNumber !== "template3" && templateNumber !== "template4" && (
         <ProfileImage register={register} errors={errors} getValues={getValues} />
       )}
-      {/* firstName  */}
+
 
       <div className="row">
         <div className="col-sm-4">
+                {/* firstName field of inout */}
           <label className="fw-bold form-label" htmlFor="firstName">First Name</label>
           <input
             type="text"
             className="form-control  border border-1 border-dark"
             id="firstName"
             {...register("personalDetails.firstName", {
-              required: {
+        
+              // validating
+              required: {                     
                 value: true,
                 message: "Please enter firstName",
               },
             })}
             placeholder="Enter First Name"
-          />
+          />  
+            {/* show error  if First Name not filled*/}
           <p className="error-message text-danger">{errors.personalDetails?.firstName?.message}</p>
         </div>
-
+      {/* Last Name field of inout */}
         <div className="col-sm-4">
           <label className="fw-bold form-label" htmlFor="lastName">Last Name</label>
           <input
@@ -51,6 +55,7 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             className="form-control  border border-1 border-dark"
             id="lastName"
             {...register("personalDetails.lastName", {
+              // validating
               required: {
                 value: true,
                 message: "Please enter lastName",
@@ -58,8 +63,10 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             })}
             placeholder="Enter your last name"
           />
+           {/* show error  */}
           <p className="error-message text-danger">{errors.personalDetails?.lastName?.message}</p>
         </div>
+      {/* Job Title field of input */}
 
         <div className="col-sm-4">
           <label className="fw-bold form-label" htmlFor="jobTitle">Job Title</label>
@@ -69,6 +76,7 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             id="jobTitle"
             name="jobTitle"
             {...register("personalDetails.jobTitle", {
+              // validating
               required: {
                 value: true,
                 message: "Please enter jobTitle",
@@ -76,10 +84,12 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             })}
             placeholder="Enter your jobTitle"
           />
+           {/* show error for Job Title */}
           <p className="  text-danger">{errors.personalDetails?.jobTitle?.message}</p>
         </div>
 
 
+      {/* Primary Phone field of input */}
 
         <div className="col-sm-4">
           <label className="fw-bold form-label" htmlFor="phone">Primary Phone</label>
@@ -89,6 +99,7 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             id="phone"
             name="phone"
             {...register("personalDetails.phone.0", {
+              // validating
               required: {
                 value: true,
                 message: "Please enter Phone Number",
@@ -104,12 +115,13 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             })}
             placeholder="Enter your Phone Number"
           />
+           {/* show error  Primary Phone*/}
           <p className="small text-danger">{errors.personalDetails?.phone?.[0]?.message}</p>
 
         </div>
 
-
-        {/* secondary Phone Number */}
+ 
+        {/* secondary Phone Number field of input */}
         <div className="col-md-4">
           <label className="fw-bold form-label" htmlFor="phone">
             WhatsApp Number
@@ -120,6 +132,7 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             id="phone"
             name="phone"
             {...register("personalDetails.phone.1", {
+              // validating
               required: {
                 value: true,
                 message: "Please enter WhatsApp Number",
@@ -136,11 +149,13 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             placeholder="Enter your Phone Number"
           />
 
+ {/* show error WhatsApp number */}
           <p className=" text-danger">{errors.personalDetails?.phone?.[1]?.message}</p>
 
         </div>
 
-        {/* Personal Email  */}
+          {/* Personal Email  field of input */}
+
         <div className="col-md-4">
           <label className="fw-bold form-label" htmlFor="email">Email</label>
           <input
@@ -148,6 +163,7 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             className="form-control  border border-1 border-dark"
             id="email"
             {...register("personalDetails.email", {
+              // validating
               required: {
                 value: true,
                 message: "Please enter Email",
@@ -163,7 +179,11 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
           />
           <p className="text-danger"> {errors.personalDetails?.email?.message}</p>
         </div>
-        {/* Address Pincode */}
+
+
+                  {/*  Address Pincode field of input */}
+
+     
         <div className="col-md-4">
           <label className="fw-bold form-label" htmlFor="pincode">Pincode</label>
           <input
@@ -171,6 +191,7 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             className="form-control  border border-1 border-dark"
             id="pincode"
             {...register("personalDetails.address.pincode", {
+              // validating Address Pincode
               required: {
                 value: true,
                 message: "Please pincode can't empty",
@@ -186,11 +207,13 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             })}
             placeholder="Enter your pincode"
           />
+           {/*Address Pincode show error  */}
           <p className=" text-danger">{errors.personalDetails?.address?.pincode?.message}</p>
         </div>
 
 
-        {/* Address City */}
+                  {/*   Address City field of input */}
+
         <div className="col-md-4">
           <label className="fw-bold form-label" htmlFor="city">City</label>
           <input
@@ -198,6 +221,7 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             className="form-control  border border-1 border-dark"
             id="city"
             {...register("personalDetails.address.city", {
+              // validating  Address City
               required: {
                 value: true,
                 message: "Please City can't empty",
@@ -205,10 +229,11 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             })}
             placeholder="Enter your city "
           />
+           {/* show error   Address City*/}
           <p className=" text-danger">{errors.personalDetails?.address?.city?.message}</p>
 
         </div>
-        {/* Address Country */}
+          {/*    Address Country field of input */}
         <div className="col-md-4">
           <label className="fw-bold form-label" htmlFor="country">Country</label>
           <input
@@ -216,6 +241,7 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             className="form-control  border border-1 border-dark"
             id="country"
             {...register("personalDetails.address.country", {
+              // validating  Address Country
               required: {
                 value: true,
                 message: "Please Country can't empty",
@@ -223,9 +249,11 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
             })}
             placeholder="Enter your Country"
           />
+           {/* show error  Address Country */}
           <p className=" text-danger">{errors.personalDetails?.address?.country?.message}</p>
 
         </div>
+
         {/* add social media links for connection */}
 
         <div className='row py-3'>
@@ -268,21 +296,14 @@ const PersonalDetails = ({ register, errors, control, getValues, templateNumber 
                 </>
               );
             })}
-
-
-
-
-
-
-
+ 
         </div>
 
       </div>
-      {/* Address City */}
-
+ 
 
     </div>
 
   )
 }
-export default PersonalDetails
+export default PersonalDetails     //export the  personal details component

@@ -2,7 +2,7 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/js/bootstrap.min.js';
-
+ 
 
 import About from "./Page/About";
 import Home from "./Page/Home";

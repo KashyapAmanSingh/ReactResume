@@ -3,6 +3,8 @@ import HomeIcon from '@mui/icons-material/Home';
  import InfoIcon from '@mui/icons-material/Info';
 import MenuIcon from '@mui/icons-material/Menu';
 import LOGO from "../../assets/image/LOGO.png"
+
+// sidebar for navigation  from Bootstrape
  const SideBar = () => {
   return (
     <div>
@@ -14,18 +16,18 @@ import LOGO from "../../assets/image/LOGO.png"
         </div>
         <div className="offcanvas-body">
        
-             
+             {/* home icon navigation */}
               <a className="text-decoration-none d-flex fs-1   align-items-center" href="/">
                 <HomeIcon  fontSize='755' color="warning"/>
                 <p  className='mx-5 text-info' >Home</p>
               </a> 
-             
+             {/* my resume navigation  */}
               <a className="text-decoration-none d-flex fs-1   align-items-center" href="/DetailFill/Preview">
                 <InfoIcon   fontSize='55' color="warning"/>
                 <p className='mx-5 text-info'>   My Resume</p>
               </a>
              
-             
+              {/* About Us navigation  */}
               <a className="text-decoration-none d-flex fs-1   align-items-center" href="/About">
                 <InfoIcon   fontSize='55' color="warning"/>
                 <p className='mx-5 text-info ' >About Us</p>
@@ -34,6 +36,7 @@ import LOGO from "../../assets/image/LOGO.png"
         </div>
       </div>
 
+             {/* navigation menu button  */}
       <div className="container-fluid mt-0">
         <button className="btn   mx-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#SideBar">
           <MenuIcon sx={{ fontSize: 70 }} color="info"/>

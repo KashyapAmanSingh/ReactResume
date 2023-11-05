@@ -3,7 +3,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
  
 const ProfileImage = ({ register, errors, getValues  }) => {
  
-    const imageFiles = getValues("personalDetails.image"); // Assuming this is your FileList object
+    const imageFiles = getValues("personalDetails.image"); // this is FileList object from input field of imghe type file
    
     return (
         <div className="form-group mx-5 px-5 px-md-4 py-md-3 mx-md-2">
@@ -37,7 +37,9 @@ const ProfileImage = ({ register, errors, getValues  }) => {
                     },
                 })}
                 style={{ display: "none" }}
-            />
+            /> 
+
+            {/* showing error if occur  */}
             <p className="error-message fw-bold mt-3 mx-0">{errors.personalDetails?.image?.message}</p>
         </div>
     );

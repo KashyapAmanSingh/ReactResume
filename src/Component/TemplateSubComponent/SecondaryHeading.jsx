@@ -2,7 +2,8 @@
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-
+ 
+// heading comes beneath top heading in template 1 and 2 
 const SecondaryHeading = ({ email, phone }) => {
     return (
         <div>

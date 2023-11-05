@@ -28,7 +28,7 @@ const EduField = ({ register, errors, control }) => {
               <div className='row'>
               <h1 className='text-center text-center fw-bold py-2 px-1 '> Fill Education Details{index+1}</h1>
 
-                {/* Qualification Degree */}
+                {/* section of the Qualification Degree */}
                 <div className="col-sm-6">
                   <label className="fw-bold form-label " htmlFor="education_field">Qualification Degree</label>
                   <input
@@ -48,7 +48,7 @@ const EduField = ({ register, errors, control }) => {
 
                   <p className="text-danger">{errors.QualificationDegree?.[index]?.degree?.message}</p>
                 </div>
-                {/* School Name */}
+                {/* section of the School Name */}
                 <div className="col-sm-6">
                   <label className="fw-bold form-label " htmlFor="schoolName">School/College Name:</label>
                   <input
@@ -75,7 +75,7 @@ const EduField = ({ register, errors, control }) => {
 
                 </div>
 
-                {/* School Start Date  */}
+                {/* section of the School Start Date  */}
                 <div className="col-sm-6">
                   <label className="fw-bold form-label " htmlFor="schoolStartDate">School Start Date </label>
                   <input
@@ -93,7 +93,7 @@ const EduField = ({ register, errors, control }) => {
                   <p className="text-danger">{errors.QualificationDegree?.[index]?.schoolStartDate?.message}</p>
                 </div>
 
-                {/*School  End Date  */}
+                {/*Section of the school  End Date  */}
                 <div className="col-sm-6">
                   <label className="fw-bold form-label " htmlFor="schoolEndDate">School End Date </label>
                   <input
@@ -171,4 +171,4 @@ const EduField = ({ register, errors, control }) => {
   )
 }
 
-export default EduField
+export default EduField           //export the edu field component
