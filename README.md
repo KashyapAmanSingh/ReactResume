@@ -6,7 +6,7 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# ReactResume
+## ReactResume
 # Code Tree Structure
 
 #Components and Pages of Application:
@@ -15,7 +15,7 @@ Template Selection: This feature allows users to select the template that they w
 ![Sample Resume](https://marketplace.canva.com/EAFRuCp3DcY/1/0/1131w/canva-black-white-minimalist-cv-resume-f5JNR-K5jjw.jpg)
 
 
-```├───public
+```─public
 │       vite.svg
 │
 └───src
@@ -29,10 +29,15 @@ Template Selection: This feature allows users to select the template that they w
     │   │
     │   └───image
     │           about2.svg
+    │           formDetailFill.png
     │           LOGO.png
+    │           mainHome.png
+    │           PdfResumeFinal.png
+    │           PreviewFinal.png
     │           Resume1.jpg
     │           ResumeFourth.png
     │           resumeSecond.png
+    │           sideBarr.png
     │           ThirdResume.png
     │
     ├───Component
@@ -89,3 +94,5 @@ Template Selection: This feature allows users to select the template that they w
     └───redux
             Slice.jsx
             Store.jsx
+
+      
