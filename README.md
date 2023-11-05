@@ -121,30 +121,7 @@ For testing, we've incorporated Jest to ensure the reliability and accuracy of t
     └───redux
             Slice.jsx
             Store.jsx
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
 # Components and Pages of Application:
@@ -178,7 +155,7 @@ For testing, we've incorporated Jest to ensure the reliability and accuracy of t
 ![AboutUs](/src/assets/image/About.png)
  
 #Project Access Links :
-- Deployment link:https://react-resume-6dil-aiae27gra-kashyapamansingh.vercel.app/
+- Deployment link: https://react-resume-6dil-kkzvibtdt-kashyapamansingh.vercel.app/
 - YouTube link:https://www.youtube.com/watch
  
  # Team Members:-
