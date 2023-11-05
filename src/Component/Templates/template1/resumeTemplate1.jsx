@@ -1,16 +1,16 @@
 import { Suspense, lazy } from "react";
-const PDFGenerator = lazy(() => import("../../Component/PdfGenerat"));
+const PDFGenerator = lazy(() => import("../../PdfGenerat"));
 import { useSelector } from 'react-redux';
-import Education from "./Template1Component/Education";
-import ProfessionalExperience from "./Template1Component/ProfessionalExperience";
-import Skills from "./Template1Component/Skills";
-import Language from "./Template1Component/Language";
-import Hobby from "./Template1Component/Hobby";
-import Links from "./Template1Component/Links";
-import Address from "./Template1Component/Address";
-import TopHeading from "./Template1Component/TopHeading";
-import SecondaryHeading from "./Template1Component/SecondaryHeading";
-import ResumePicture from "./Template1Component/ResumePicture";
+import Education from "../../TemplateSubComponent/Education";
+import ProfessionalExperience from "../../TemplateSubComponent/ProfessionalExperience";
+import Skills from "../../TemplateSubComponent/Skills";
+import Language from "../../TemplateSubComponent/Language";
+import Hobby from "../../TemplateSubComponent/Hobby";
+import Links from "../../TemplateSubComponent/Links";
+import Address from "../../TemplateSubComponent/Address";
+import TopHeading from "../../TemplateSubComponent/TopHeading";
+import SecondaryHeading from "../../TemplateSubComponent/SecondaryHeading";
+import ResumePicture from "../../TemplateSubComponent/ResumePicture";
 
 
 

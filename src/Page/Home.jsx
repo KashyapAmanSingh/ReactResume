@@ -47,9 +47,9 @@ const Home = () => {
             <img src={resume4} alt="Resume 1"  width={250} height={350}  className='mx-auto'/>
             <div className="card-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
             
-            <Link to="/DetailFill?template=template3" className="btn btn-warning">
+            <Link to="/DetailFill?template=template4" className="btn btn-warning">
 
-            Use Template 3</Link>
+            Use Template 4</Link>
             </div>
           </div>
      

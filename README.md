@@ -1,9 +1,190 @@
-# React + Vite
+# Frontend Resume Builder Capstone Project
+ 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Resume-Builder
 
-Currently, two official plugins are available:
+Presenting Vite was used to create Resume Builder, a dynamic React application renowned for its efficiency and optimization. Using this potent tool, you can easily design your professional identity and make resumes that stand out like never before.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# ReactResume
+Resume Builder is your key to getting your ideal job since it will help you stand out from the competition and make a lasting impression. Begin directing your destiny right now!
+
+The procedure is smooth when using Resume Builder:
+You can easily create an exceptional CV that will help you stand out in the job market in just three easy steps.
+1-Select your favorite template.
+2-Enter your information.
+3-And  Just Download
+
+# Installation
+- Clone this repository locally using the following command:
+ 
+### repo clone link
+git clone https://github.com/KashyapAmanSingh/ReactResume.git
+
+
+- Use `npm install <package_name>` to install the required dependencies.
+- Start the application by running `npm start` in your terminal after the installation is complete.
+
+
+- Tech Stack Used:-
+- - React Vite
+- - dom of React-router
+- - Hook-React Form
+- - Redux @emotion/styled @mui/icons-material @reduxjs/toolkit @emotion/react
+- - HTML2PDF.js, Bootstrap, JSP, JSP-HTML2Canvas
+
+Start the application by typing npm start in your terminal after the installation is complete.
+
+# Testing
+ - Tech Stack Used for testing - Jest
+
+For testing, we've incorporated Jest to ensure the reliability and accuracy of the Resume Builder application.
+ 
+
+# Code Tree Structure
+
+```│
+├───public
+│       vite.svg
+│
+└───src
+    │   App.css
+    │   App.jsx
+    │   index.css
+    │   main.jsx
+    │
+    ├───assets
+    │   │   react.svg
+    │   │
+    │   └───image
+    │           about2.svg
+    │           formDetailFill.png
+    │           LOGO.png
+    │           mainHome.png
+    │           PdfResumeFinal.png
+    │           PreviewFinal.png
+    │           Resume1.jpg
+    │           ResumeFourth.png
+    │           resumeSecond.png
+    │           sideBarr.png
+    │           ThirdResume.png
+    │
+    ├───Component
+    │   │   PdfGenerat.jsx
+    │   │
+    │   ├───Component
+    │   │       btnbtn.jsx
+    │   │       MainSideBar.jsx
+    │   │
+    │   ├───DetailForm
+    │   │       ResumeDetail.jsx
+    │   │
+    │   ├───formDir
+    │   │       eduField.jsx
+    │   │       FormDefaultConfig.jsx
+    │   │       keySkills.jsx
+    │   │       personalDetails.jsx
+    │   │       profExp.jsx
+    │   │       ProfileImage.jsx
+    │   │       sideBar.jsx
+    │   │
+    │   ├───Templates
+    │   │   ├───template1
+    │   │   │       resumeTemplate1.jsx
+    │   │   │
+    │   │   ├───template2
+    │   │   │       resumeTemplate2.jsx
+    │   │   │
+    │   │   ├───template3
+    │   │   │       resumeTemplate.jsx
+    │   │   │       template34Qualification.jsx
+    │   │   │
+    │   │   └───template4
+    │   │           ResumeTemplateFour.jsx
+    │   │
+    │   └───TemplateSubComponent
+    │           Address.jsx
+    │           Education.jsx
+    │           Hobby.jsx
+    │           Language.jsx
+    │           Links.jsx
+    │           ProfessionalExperience.jsx
+    │           ResumePicture.jsx
+    │           SecondaryHeading.jsx
+    │           Skills.jsx
+    │           TopHeading.jsx
+    │
+    ├───Page
+    │       About.jsx
+    │       Home.jsx
+    │       NotFound.jsx
+    │       Preview.jsx
+    │
+    └───redux
+            Slice.jsx
+            Store.jsx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Components and Pages of Application:
+ 
+## Template Selection:
+-This feature allows users to select the template that they want.
+![mainHome](/src/assets/image/mainHome.png)
+
+
+## sideBarr: 
+- This section allows users to Navigate 
+![Side Bar](/src/assets/image/sideBarr.png)
+ 
+
+## Information Entry Page: 
+- This section allows users to enter their qualifications, employment history, education, and personal data.
+![Information Entry](/src/assets/image/formDetailFill.png)
+
+  
+
+## Preview Page: 
+- Users can view their completed resume in its final format in this component. After completing all the required information, they can download the resume in PDF format by clicking the "Generate Pdf" button.
+![Preview Page](/src/assets/image/PreviewFinal.png)
+
+##File_Downloaded: 
+
+![File_Downloaded](/src/assets/image/PdfResumeFinal.png)
+ 
+## AboutUs: 
+
+![AboutUs](/src/assets/image/About.png)
+ 
+#Project Access Links :
+- Deployment link:https://react-resume-6dil-aiae27gra-kashyapamansingh.vercel.app/
+- YouTube link:https://www.youtube.com/watch
+ 
+ # Team Members:-
+ - Completed Individually
+
+
+
+
+

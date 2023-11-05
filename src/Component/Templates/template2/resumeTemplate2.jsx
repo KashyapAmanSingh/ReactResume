@@ -2,19 +2,19 @@ import { Suspense, lazy } from 'react';
 
 
 import { useSelector } from 'react-redux';
-import Skills from '../template1/Template1Component/Skills';
-import ProfessionalExperience from '../template1/Template1Component/ProfessionalExperience';
-import SecondaryHeading from '../template1/Template1Component/SecondaryHeading';
-import TopHeading from '../template1/Template1Component/TopHeading';
-import Education from '../template1/Template1Component/Education';
-import Links from '../template1/Template1Component/Links';
-import Address from '../template1/Template1Component/Address';
-import ResumePicture from '../template1/Template1Component/ResumePicture';
-import Hobby from "../template1/Template1Component/Hobby";
-import Language from '../template1/Template1Component/Language';
+import Skills from '../../TemplateSubComponent/Skills';
+import ProfessionalExperience from '../../TemplateSubComponent/ProfessionalExperience';
+import SecondaryHeading from '../../TemplateSubComponent/SecondaryHeading';
+import TopHeading from '../../TemplateSubComponent/TopHeading';
+import Education from '../../TemplateSubComponent/Education';
+import Links from '../../TemplateSubComponent/Links';
+import Address from '../../TemplateSubComponent/Address';
+import ResumePicture from '../../TemplateSubComponent/ResumePicture';
+import Hobby from "../../TemplateSubComponent/Hobby";
+import Language from '../../TemplateSubComponent/Language';
 
 
-const PDFGenerator = lazy(() => import("../../Component/PdfGenerat"));
+const PDFGenerator = lazy(() => import("../../PdfGenerat"));
 
 function ResumeTemplateSecond() {
 

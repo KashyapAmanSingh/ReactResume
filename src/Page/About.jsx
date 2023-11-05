@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-sm-7 mt-5 pt-4 ">
+        <div className="col-sm-7 mt-0 pt-4 ">
           <h1 className="mt-5 pt-4 display-6 text-center fw-bold">
             Welcome to our <span className="text-info">Resume Builder</span> for
             Job Seekers
@@ -35,7 +35,7 @@ const About = () => {
             accomplishments, <span className="text-info">&</span> skills
           </p>
         </div>
-        <div className="col-sm-5 mt-5 pt-5 ">
+        <div className="col-sm-5 mt-0 pt-4 ">
           <img
             src={aboutSvg}
             height={520}

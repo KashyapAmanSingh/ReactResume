@@ -1,9 +1,9 @@
  import { useSearchParams } from 'react-router-dom';
 
- import ResumeTemplateFirst from './template1/resumeTemplate1';
-import ResumeTemplateSecond from './template2/resumeTemplate2';
-import ResumeTemplateThird from './template3/resumeTemplate';
-import ResumeTemplateFour from './template4/ResumeTemplateFour';
+ import ResumeTemplateFirst from '../Component/Templates/template1/resumeTemplate1';
+import ResumeTemplateSecond from '../Component/Templates/template2/resumeTemplate2';
+import ResumeTemplateThird from '../Component/Templates/template3/resumeTemplate';
+import ResumeTemplateFour from '../Component/Templates/template4/ResumeTemplateFour';
 
  
 const  Preview = () => {

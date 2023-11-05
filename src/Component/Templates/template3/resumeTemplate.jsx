@@ -1,24 +1,26 @@
 import { Suspense, lazy } from 'react'
-const PDFGenerator = lazy(() => import("../../Component/PdfGenerat"));
-import EmailIcon from '@mui/icons-material/Email';
+ import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useSelector } from 'react-redux';
-import TopHeading from '../template1/Template1Component/TopHeading';
-import ProfessionalExperience from '../template1/Template1Component/ProfessionalExperience';
+import TopHeading from '../../TemplateSubComponent/TopHeading';
+
+import ProfessionalExperience from '../../TemplateSubComponent/ProfessionalExperience';
+import Template34Qualification from './template34Qualification';
+ 
+const PDFGenerator = lazy(() => import("../../PdfGenerat"));
 const ResumeTemplateThird = () => {
     const data = useSelector((state) => state.user.UserData);
     console.log(data, "😜😜😜😜😜😜data from   ResumeTemplateFirst");
     const {
-        KeySkill: { KeySkills, Accomplishment, Keyhobby, Keylanguages },
+        KeySkill: { KeySkills  },
         QualificationDegree,
         personalDetails: {
-            address: { city, country, pincode },
+            address: { city, country },
             email,
             firstName,
-            image,
             jobTitle,
             lastName,
             phone,
@@ -27,29 +29,7 @@ const ResumeTemplateThird = () => {
         moreExperienceFields,
     } = data;
 
-
-
-
-
-    console.log("Accomplishment:", Accomplishment);
-
-    console.log("socialMediaLinks:", socialMediaLinks);
-    console.log("moreExperienceFields:", moreExperienceFields);
-
-
-    Accomplishment.map((accomplish, index) => {
-        console.log(`Accomplishment ${index + 1}:`, accomplish.Accomplish);
-    });
-
-    Keyhobby.map((hobby, index) => {
-        console.log(`Hobby ${index + 1}:`, hobby.Hobby);
-    });
-
-    // Map and log social media links
-    socialMediaLinks.map((link, index) => {
-        console.log(`Social Media Link ${index + 1}:`, link.links);
-    });
-
+ 
     return (
         <div className='d-flex justify-content-start'>
             <div className="container">
@@ -81,12 +61,12 @@ const ResumeTemplateThird = () => {
                                         </ul>
                                     </div>
 
-
-
-
                                     <div className="SideBarEducation text-end">
                                         <h5 className='fs-4 text-success fw-medium'>Education</h5>
+                                        <Template34Qualification QualificationDegree={QualificationDegree}/>
 
+
+{/* 
                                         {QualificationDegree.map((qualification, index) => {
                                             const {
                                                 currently,
@@ -105,7 +85,7 @@ const ResumeTemplateThird = () => {
                                                     <p className='m-0 p-0'>{`${schoolStartDate} - ${currently ? "Ongoing" : schoolEndDate}`}</p>
                                                 </div>
                                             );
-                                        })}
+                                        })} */}
 
 
 
