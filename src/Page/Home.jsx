@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom'
  
-import resume1 from "../assets/image/Resume1.jpg";
+import resume1 from "../assets/image/Resume1.png";
 import resume2 from "../assets/image/resumeSecond.png";
 import resume3 from "../assets/image/ThirdResume.png";
 import resume4 from "../assets/image/ResumeFourth.png";
