@@ -128,31 +128,31 @@ For testing, we've incorporated Jest to ensure the reliability and accuracy of t
  
 ## Template Selection:
 -This feature allows users to select the template that they want.
-![mainHome](/src/assets/image/mainHome.png)
+![mainHome](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/mainHome.png)
 
 
 ## sideBarr: 
 - This section allows users to Navigate 
-![Side Bar](/src/assets/image/sideBarr.png)
+![Side Bar](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/sideBarr.png)
  
 
 ## Information Entry Page: 
 - This section allows users to enter their qualifications, employment history, education, and personal data.
-![Information Entry](/src/assets/image/formDetailFill.png)
+![Information Entry](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/formDetailFill.png)
 
   
 
 ## Preview Page: 
 - Users can view their completed resume in its final format in this component. After completing all the required information, they can download the resume in PDF format by clicking the "Generate Pdf" button.
-![Preview Page](/src/assets/image/PreviewFinal.png)
+![Preview Page](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/PreviewFinal.png)
 
 ##File_Downloaded: 
 
-![File_Downloaded](/src/assets/image/PdfResumeFinal.png)
+![File_Downloaded](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/PdfResumeFinal.png)
  
 ## AboutUs: 
 
-![AboutUs](/src/assets/image/About.png)
+![AboutUs](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/About.png)
  
 #Project Access Links :
 - Deployment link: https://react-resume-6dil-kkzvibtdt-kashyapamansingh.vercel.app/
