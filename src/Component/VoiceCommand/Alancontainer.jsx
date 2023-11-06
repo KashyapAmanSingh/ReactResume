@@ -26,12 +26,7 @@ const key = import.meta.env.VITE_Alan_Button_Activation_Key;
             alanBtn({
                 key,
                 onCommand: (commandData) => {
-                    // if (commandData.command === 'setName') {
-                    //     // Update the form value of field
-                    //     const set = setFormname(commandData.data);
-                    //     <h1> {set} </h1>
-                    // }
-
+                
                     if (commandData.command === 'setHome') {
                         navigate('/');
                     }
