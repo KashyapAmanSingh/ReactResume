@@ -13,6 +13,8 @@ const startvoiceContext = async () => {
     await voiceContext.audioWorklet.addModule('https://sdk.alan.app/js/alan_lib.js');
     return voiceContext;
 };
+const key = import.meta.env.VITE_Alan_Button_Activation_Key;
+
  const AlanContainer = (props) => {
     const BtnRef = useRef(null);
     const [isButtonVisible, setButtonVisibility] = useState(true); // Step 1
@@ -22,7 +24,7 @@ const startvoiceContext = async () => {
     useEffect(() => {
         startvoiceContext().then((voiceContext) => {
             alanBtn({
-                key: import.meta.env.VITE_Alan_Button_Activation_Key,
+                key,
                 onCommand: (commandData) => {
                     // if (commandData.command === 'setName') {
                     //     // Update the form value of field
@@ -55,7 +57,7 @@ const startvoiceContext = async () => {
             setButtonVisibility(false); // Hide the button
         }
         const BtnInstance = alanBtn({
-            key: import.meta.env.VITE_Alan_Button_Activation_Key,
+            key,
       
             rootEl: BtnRef.current,
             onCommand: (commandData) => {
