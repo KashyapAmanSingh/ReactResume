@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
 import { useEffect, useRef } from 'react';
 import styles from "./Alan.module.css"
@@ -22,7 +23,7 @@ const AlanContainer = (props) => {
     useEffect(() => {
         startvoiceContext().then((voiceContext) => {
             alanBtn({
-                key: '72df8a6ce3c672515c00887c814342202e956eca572e1d8b807a3e2338fdd0dc/stage',
+                key: process.env.Alan_Button_Activation_Key,
                 onCommand: (commandData) => {
                     // if (commandData.command === 'setName') {
                     //     // Update the form value of field
@@ -55,7 +56,7 @@ const AlanContainer = (props) => {
             setButtonVisibility(false); // Hide the button
         }
         const BtnInstance = alanBtn({
-            key: '72df8a6ce3c672515c00887c814342202e956eca572e1d8b807a3e2338fdd0dc/stage',
+            key:process.env.Alan_Button_Activation_Key,
             rootEl: BtnRef.current,
             onCommand: (commandData) => {
 
