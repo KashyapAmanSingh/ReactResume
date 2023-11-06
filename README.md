@@ -53,7 +53,7 @@ This project includes voice command integration using [Alan AI](https://alan.app
 # Code Tree Structure
 
 ``` ├───public
-└───src
+    └───src
     │   App.css
     │   App.jsx
     │   index.css
@@ -65,23 +65,22 @@ This project includes voice command integration using [Alan AI](https://alan.app
     │   └───image
     │           About.png
     │           about2.svg
-    │           formDetailFill.png
     │           LOGO.png
-    │           mainHome.png
     │           notFound.svg
     │           PdfResumeFinal.png
     │           PreviewFinal.png
     │           Resume1.png
     │           ResumeFourth.png
     │           resumeSecond.png
-    │           sideBarr.png
     │           ThirdResume.png
     │
     ├───Component
-    │   │   PdfGenerat.jsx
+    │   │   NavBar.jsx
     │   │
     │   ├───Component
+    │   │       btnbtn.jsx
     │   │       MainSideBar.jsx
+    │   │       NvOff.jsx
     │   │
     │   ├───DetailForm
     │   │       ResumeDetail.jsx
@@ -95,6 +94,10 @@ This project includes voice command integration using [Alan AI](https://alan.app
     │   │       ProfileImage.jsx
     │   │       sideBar.jsx
     │   │
+    │   ├───Pdf File
+    │   │       PdfGenerat.jsx
+    │   │
+    │   ├───PdfGenerator
     │   ├───Templates
     │   │   ├───template1
     │   │   │       resumeTemplate1.jsx
@@ -121,21 +124,33 @@ This project includes voice command integration using [Alan AI](https://alan.app
     │   │       Skills.jsx
     │   │       TopHeading.jsx
     │   │
+    │   ├───UserHookForm
+    │   │       ResumeDetail.jsx
+    │   │
     │   └───VoiceCommand
     │           Alan.module.css
     │           Alancontainer.jsx
     │
     ├───Page
     │   │   About.jsx
+    │   │   Home.jsx
     │   │   NotFound.jsx
     │   │   Preview.jsx
     │   │
-    │   └───Home
-    │           Home.jsx
+    │   ├───Home
+    │   │       Home.jsx
+    │   │
+    │   ├───template1
+    │   │       resumeTemplate1.jsx
+    │   │
+    │   └───template2
+    │           resumeTemplate2.jsx
     │
     └───redux
             Slice.jsx
             Store.jsx
+
+   
 ```
 
 # Components and Pages of Application:
