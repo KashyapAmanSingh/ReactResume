@@ -1,5 +1,6 @@
 
 
+import AlanContainer from "../Component/VoiceCommand/Alancontainer";
 import aboutSvg from "../assets/image/about2.svg";
  
 
@@ -47,6 +48,11 @@ const About = () => {
           ></img>
         </div>
       </div>
+
+
+      <div className=' d-flex justify-content-end mb-5'>
+            <AlanContainer />
+          </div>
     </div>
   );
 };

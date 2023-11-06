@@ -11,8 +11,8 @@ import LOGO from "../../assets/image/LOGO.png"
       <div className="offcanvas offcanvas-start" id="SideBar">
         <div className="offcanvas-header">
       
-          <img  className="offcanvas-title mx-5 pt-2 " src={LOGO } alt='Heading Logo'/>
-          <button type="button" className="btn-close" data-bs-dismiss="offcanvas"></button>
+          <img  className="offcanvas-title mx-1 mx-sm-5 pt-2 img-fluid" src={LOGO} alt='Heading Logo'/>
+          <button type="button" className="btn-close fw-bold fs-1" data-bs-dismiss="offcanvas"></button>
         </div>
         <div className="offcanvas-body">
        
@@ -38,10 +38,12 @@ import LOGO from "../../assets/image/LOGO.png"
 
              {/* navigation menu button  */}
       <div className="container-fluid mt-0">
-        <button className="btn   mx-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#SideBar">
+        <button className="btn mx-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#SideBar">
           <MenuIcon sx={{ fontSize: 70 }} color="info"/>
         </button>
       </div>
+   
+
     </div>
   );
 }

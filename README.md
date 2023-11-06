@@ -11,7 +11,8 @@ You can easily create an exceptional CV that will help you stand out in the job 
 1-Select your favorite template.
 2-Enter your information.
 3-And  Just Download
-
+ 
+ 
 # Installation
 - Clone this repository locally using the following command:
  
@@ -29,21 +30,28 @@ git clone https://github.com/KashyapAmanSingh/ReactResume.git
 - - Hook-React Form
 - - Redux @emotion/styled @mui/icons-material @reduxjs/toolkit @emotion/react
 - - HTML2PDF.js, Bootstrap, JSP, JSP-HTML2Canvas
-
-Start the application by typing npm start in your terminal after the installation is complete.
-
-# Testing
- - Tech Stack Used for testing - Jest
-
-For testing, we've incorporated Jest to ensure the reliability and accuracy of the Resume Builder application.
+- [Voice Command Integration](#voice-command-integration)
  
+Start the application by typing npm start in your terminal after the installation is complete.
+ 
+ # Out Of The Box Thinkings
+ ## Voice Command Integration
+
+This project includes voice command integration using [Alan AI](https://alan.app/), which allows users to interact with the application using voice commands. You can find the voice command component in the `AlanContainer` component.
+
+### How to Use Voice Commands
+
+1. Ensure that your microphone is enabled and accessible in your web browser.
+2. Click on the microphone icon (Mic) button to activate voice command recognition.
+3. Wait for the listening indicator to appear and start speaking voice commands.
+4. The application will respond to recognized voice commands and perform corresponding actions that is primary related ot navigation on different pages.
+  
+
+
 
 # Code Tree Structure
 
-```│
-├───public
-│       vite.svg
-│
+``` ├───public
 └───src
     │   App.css
     │   App.jsx
@@ -54,13 +62,15 @@ For testing, we've incorporated Jest to ensure the reliability and accuracy of t
     │   │   react.svg
     │   │
     │   └───image
+    │           About.png
     │           about2.svg
     │           formDetailFill.png
     │           LOGO.png
     │           mainHome.png
+    │           notFound.svg
     │           PdfResumeFinal.png
     │           PreviewFinal.png
-    │           Resume1.jpg
+    │           Resume1.png
     │           ResumeFourth.png
     │           resumeSecond.png
     │           sideBarr.png
@@ -70,7 +80,6 @@ For testing, we've incorporated Jest to ensure the reliability and accuracy of t
     │   │   PdfGenerat.jsx
     │   │
     │   ├───Component
-    │   │       btnbtn.jsx
     │   │       MainSideBar.jsx
     │   │
     │   ├───DetailForm
@@ -99,23 +108,29 @@ For testing, we've incorporated Jest to ensure the reliability and accuracy of t
     │   │   └───template4
     │   │           ResumeTemplateFour.jsx
     │   │
-    │   └───TemplateSubComponent
-    │           Address.jsx
-    │           Education.jsx
-    │           Hobby.jsx
-    │           Language.jsx
-    │           Links.jsx
-    │           ProfessionalExperience.jsx
-    │           ResumePicture.jsx
-    │           SecondaryHeading.jsx
-    │           Skills.jsx
-    │           TopHeading.jsx
+    │   ├───TemplateSubComponent
+    │   │       Address.jsx
+    │   │       Education.jsx
+    │   │       Hobby.jsx
+    │   │       Language.jsx
+    │   │       Links.jsx
+    │   │       ProfessionalExperience.jsx
+    │   │       ResumePicture.jsx
+    │   │       SecondaryHeading.jsx
+    │   │       Skills.jsx
+    │   │       TopHeading.jsx
+    │   │
+    │   └───VoiceCommand
+    │           Alan.module.css
+    │           Alancontainer.jsx
     │
     ├───Page
-    │       About.jsx
-    │       Home.jsx
-    │       NotFound.jsx
-    │       Preview.jsx
+    │   │   About.jsx
+    │   │   NotFound.jsx
+    │   │   Preview.jsx
+    │   │
+    │   └───Home
+    │           Home.jsx
     │
     └───redux
             Slice.jsx

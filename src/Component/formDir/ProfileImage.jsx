@@ -27,17 +27,15 @@ const ProfileImage = ({ register, errors, getValues  }) => {
 
             <input
                 type="file"
-                className="form-control"
+                className="form-control d-none"
                 id="image"
-                onChange={(e)=>console.log(e.target.value,"The value has changed")}
-                {...register("personalDetails.image", {
+                 {...register("personalDetails.image", {
                     required: {
                         value: true,
                         message: "Please Upload an image file",
                     },
                 })}
-                style={{ display: "none" }}
-            /> 
+             /> 
 
             {/* showing error if occur  */}
             <p className="error-message fw-bold mt-3 mx-0">{errors.personalDetails?.image?.message}</p>

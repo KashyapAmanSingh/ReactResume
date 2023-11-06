@@ -66,7 +66,7 @@ const ResumeTemplateFour = () => {
                                             <li><WhatsAppIcon color="success" /> {phone[1]}</li>
 
                                             <li> <EmailIcon color="success" />{email.slice(0, 18)}</li>
-                                            <li >  <a className='text-decoration-none text-dark' href={socialMediaLinks[0]}>Linkdin<LinkedInIcon color="success" /></a></li>
+                                            <li >  <a className='text-decoration-none text-dark' href={socialMediaLinks[0]}><LinkedInIcon color="success" />Linkdin</a></li>
 
                                             <li><LocationOnIcon color="success" /> {`${city} ${country} `} </li>
                                         </ul>
