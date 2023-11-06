@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-const PDFGenerator = lazy(() => import("../../PdfGenerat"));
+const PDFGenerator = lazy(() => import("../../Pdf File/PdfGenerat"));
 import { useSelector } from 'react-redux';
 import Education from "../../TemplateSubComponent/Education";
 import ProfessionalExperience from "../../TemplateSubComponent/ProfessionalExperience";

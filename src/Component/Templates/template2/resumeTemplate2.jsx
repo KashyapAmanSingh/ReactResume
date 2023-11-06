@@ -14,7 +14,7 @@ import Hobby from "../../TemplateSubComponent/Hobby";
 import Language from '../../TemplateSubComponent/Language';
 
 
-const PDFGenerator = lazy(() => import("../../PdfGenerat"));
+const PDFGenerator = lazy(() => import("../../Pdf File/PdfGenerat"));
 
 function ResumeTemplateSecond() {
 
