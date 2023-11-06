@@ -19,8 +19,7 @@ const PDFGenerator = lazy(() => import("../../PdfGenerat"));
 function ResumeTemplateSecond() {
 
   const data = useSelector((state) => state.user.UserData);
-  console.log(data, "😜😜😜😜😜😜data from   ResumeTemplateFirst");
-  const {
+   const {
     KeySkill: { KeySkills, Accomplishment, Keyhobby, Keylanguages },
     personalDetails: {
       address,

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
  .resume3container{
+=======
+ 
+ 
+  .resume3container{
+>>>>>>> 439afe43bfeef0a26b450ba7a0d315a866f1101c
   width: 70vw !important;
  margin-left:18vw !important;
 height:auto !important;
@@ -9,6 +15,7 @@ padding-bottom: 6rem !important;
  .skill-h {
  margin-right: 4.1rem !important;
 }
+<<<<<<< HEAD
  
  
 /* end template start  */
@@ -16,6 +23,25 @@ padding-bottom: 6rem !important;
  border-bottom: 0.8rem solid #000;  
 } 
 
+=======
+.Languages-h {
+ margin-right: 1rem !important;
+}
+.Hobbies-h {
+ margin-right: 1.9rem !important;
+}
+.contact_stripe {
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}  
+
+/* end template start  */
+ .main_header {
+ border-bottom: 0.8rem solid #000;  
+} 
+
+>>>>>>> 439afe43bfeef0a26b450ba7a0d315a866f1101c
   .sidebar {
  border-right: 0.4rem solid #000;  
 }  
@@ -33,7 +59,11 @@ padding-bottom: 6rem !important;
 }
 
 .card-overlay {
+<<<<<<< HEAD
  background: rgba(159, 62, 53, 0.8);
+=======
+ background: rgba(255, 118, 105, 0.8);
+>>>>>>> 439afe43bfeef0a26b450ba7a0d315a866f1101c
  opacity: 0; /* Initially hidden */
 
  transition: opacity 0.3s;
