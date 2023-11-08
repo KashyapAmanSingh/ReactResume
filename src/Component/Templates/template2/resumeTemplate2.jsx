@@ -100,7 +100,7 @@ function ResumeTemplateSecond() {
           </div>
 
         </div>
-        <div className='pdfBtn mx-5'>
+        <div className='pdfBtn mx-5 border border-info border-4'>
           <Suspense fallback={<div>Loading...</div>}>
             <PDFGenerator />
           </Suspense>

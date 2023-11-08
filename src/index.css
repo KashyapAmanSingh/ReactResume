@@ -54,13 +54,13 @@ padding-bottom: 6rem !important;
 
  @media (min-width: 992px) {
   .TemplateSecond2{
-    width: 70vw;
+    width: 75vw;
     display: flex !important;
  
    } 
    .pdfBtn{
-    width: 90vw;
-   }
+     width: 20vw !important;
+    }
   
 }
  

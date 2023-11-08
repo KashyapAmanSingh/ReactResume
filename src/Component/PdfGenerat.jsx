@@ -55,16 +55,16 @@ function PDFGenerator() {
             onChange={handleFileNameChange}
           />
 
-          <div className="d-flex justify-content-around my-3">
+          <div className="d-flex justify-content-around my-3 ">
             <button
-              className="btn btn-warning btn-block"
+              className="btn btn-warning " 
               onClick={generatePDF}
             >
-              Generate PDF
+              Generate 
             </button>
 
             <button
-              className="btn btn-warning mx-4  "
+              className="btn btn-warning mx-4  py-0"
               onClick={goBackPage}
             >
               Go Back

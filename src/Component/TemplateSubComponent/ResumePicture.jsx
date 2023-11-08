@@ -10,14 +10,15 @@ const ResumePicture = ({ image ,customStyle}) => {
             >
                 {image ? (
                     <img className={`${customStyle}`} src={URL.createObjectURL(image[0])} alt=""  
-                        style={{ maxWidth: "150%", maxHeight: "30%" }}
+                        style={{ maxWidth: "100%", maxHeight: "30%" }}
 
                     />
                 ) : (
-                    <AccountCircleIcon className="bg-danger mx-5 pb-4 rounded-5  rounded rounded-circle py-1  d-flex justify-content-center align-items-middle " style={{ fontSize: "7rem" }} />
+                    <AccountCircleIcon className="bg-danger  pb-4 rounded-5  rounded rounded-circle py-1  d-flex justify-content-center align-items-middle " style={{ fontSize: "7rem" }} />
                 )}
             </span>
         </div>
+        // mx-5
     )
 }
 
