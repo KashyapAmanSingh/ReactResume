@@ -13,8 +13,7 @@ import Template34Qualification from '../template3/template34Qualification';
 
 const ResumeTemplateFour = () => {
      const data = useSelector((state) => state.user.UserData);
-    console.log(data, "😜😜😜😜😜😜data from   ResumeTemplateFirst");
-    const {
+     const {
         KeySkill: { KeySkills },
         QualificationDegree,
         personalDetails: {
