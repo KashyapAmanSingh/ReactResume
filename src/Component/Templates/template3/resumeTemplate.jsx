@@ -10,7 +10,7 @@ import TopHeading from '../../TemplateSubComponent/TopHeading';
 import ProfessionalExperience from '../../TemplateSubComponent/ProfessionalExperience';
 import Template34Qualification from './template34Qualification';
  
-const PDFGenerator = lazy(() => import("../../PdfGenerat"));
+const PDFGenerator = lazy(() => import("../../PdfGeneration/PdfGenerat"));
 const ResumeTemplateThird = () => {
     const data = useSelector((state) => state.user.UserData);
      const {

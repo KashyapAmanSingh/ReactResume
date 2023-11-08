@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-const PDFGenerator = lazy(() => import("../../PdfGenerat"));
+const PDFGenerator = lazy(() => import("../../PdfGeneration/PdfGenerat"));
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
