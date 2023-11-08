@@ -174,7 +174,7 @@ This project includes voice command integration using [Alan AI](https://alan.app
 
 
 #Project Access Links :
-- Deployment link: https://react-resume-324lp263b-kashyapamansingh.vercel.app/
+- Deployment link:  https://react-resume-jljbaqer2-kashyapamansingh.vercel.app/
 - YouTube link: https://youtu.be/gEAYEK8uQog?si=jn8Hm63fyrDMRkmM
  
  # Team Members:-
