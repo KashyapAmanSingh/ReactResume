@@ -53,7 +53,7 @@ This project includes voice command integration using [Alan AI](https://alan.app
 # Code Tree Structure
 
 ```
-    └───src
+ └───src
     │   App.jsx
     │   index.css
     │   main.jsx
@@ -127,7 +127,6 @@ This project includes voice command integration using [Alan AI](https://alan.app
     │
     ├───Page
     │   │   About.jsx
-    │   │   Home.jsx
     │   │   NotFound.jsx
     │   │   Preview.jsx
     │   │
