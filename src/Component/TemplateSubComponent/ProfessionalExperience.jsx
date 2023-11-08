@@ -34,8 +34,8 @@ const ProfessionalExperience = ({moreExperienceFields}) => {
 
                         </p>
                         <h6 className="my-1">Summary </h6>
-                        <p className="text-center">{workSummary.slice(0, 260)}  </p>
-                        <p className="text-center">{PersonalExperience.slice(0, 260)}  </p>
+                        <p className="text-center">{workSummary}  </p>
+                        <p className="text-center">{PersonalExperience}  </p>
                       </div>
                     </div>
                   );
