@@ -28,8 +28,8 @@ git clone https://github.com/KashyapAmanSingh/ReactResume.git
 - - dom of React-router
 - - React Hook Form
 - - Redux @emotion/styled @mui/icons-material @reduxjs/toolkit @emotion/react
-- - HTML2PDF.js, JSP
-- - Bootstrap
+- - HTML2PDF.js, JSPf
+- - Bootstrape
 - - Alan AI
 - [Voice Command Integration](#voice-command-integration)
  
