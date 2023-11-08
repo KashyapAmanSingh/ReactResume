@@ -60,14 +60,14 @@ function PDFGenerator() {
               className="btn btn-warning btn-block"
               onClick={generatePDF}
             >
-              Generate PDF
+              Generate 
             </button>
 
             <button
-              className="btn btn-warning mx-4  "
+              className="btn btn-warning mx-4"
               onClick={goBackPage}
             >
-              Go Back
+              Back
             </button>
           </div>
         </div>
