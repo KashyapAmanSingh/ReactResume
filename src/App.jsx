@@ -10,6 +10,7 @@ import Home from "./Page/Home/Home";
 import NotFound from "./Page/NotFound";
 import Preview from "./Page/Preview";
  import ResumeDetailFillForm from "./Component/DetailForm/ResumeDetail";
+import ResumeTemplateFirst from "./Component/Templates/template1/resumeTemplate1";
   
 function App() {
   return (
@@ -27,7 +28,10 @@ function App() {
         path: "/About",
         element: <About/>,
       },
-   
+      {
+        path: "/temp",
+        element: <ResumeTemplateFirst/>,
+      },
       {
         path: "DetailFill",
         children: [
