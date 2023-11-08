@@ -28,20 +28,19 @@ const  Preview = () => {
   // Select the template component based on the template number from the URL
    const TemplateComponent = templates[templateNumber] || null;
 
-  return (
-    <div>
-      {TemplateComponent}
-       {
-        location.pathname === "/DetailFill/Preview" ? (  
-        <>       
+ return (
+  <div>
+    {location.pathname === "/DetailFill/Preview" ? (
+      <>
         <h1 className='mx-5 text-center '>First <span className='text-info'>Select</span> the Template & fill respective <span className='text-info'> Details</span></h1>
-       <NotFound/>
-       </>
-        ): null
-       }
-    
-     </div>
-  );
+        <NotFound />
+      </>
+    ) : (
+      TemplateComponent
+    )}
+  </div>
+);
+
 };
 
 export default  Preview;
