@@ -138,33 +138,36 @@ This project includes voice command integration using [Alan AI](https://alan.app
 ```
 
 # Components and Pages of Application:
+
+
+
+  
+# Components and Pages of Application:
  
 ## Template Selection:
 -This feature allows users to select the template that they want. 
-![mainHome](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/4e5300a3-8a6a-4a13-bcb9-48e04aada93b)
-
+![Home Page](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/75eb6043-5e1f-44b8-9a40-0da2ca375b44)
+ 
 ## sideBarr: 
 - This section allows users to Navigate 
-  ![Side Bar](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/94990d51-dcb1-49da-a3df-103c887de470)
+ ![Side Bar)](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/bc402bb6-e346-4382-8b31-58ecb90edc77)
+
 
 ## Information Entry Page: 
 - This section allows users to enter their qualifications, employment history, education, and personal data.
-  ![Information Entry](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/9741edfe-2757-4cdb-9782-25def261f44a)
+![Information Entry](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/c99aa3c6-fa6b-43f9-8b19-340d234839c4)
 
 
 
 ## Preview Page: 
 - Users can view their completed resume in its final format in this component. After completing all the required information, they can download the resume in PDF format by clicking the "Generate Pdf" button.
-![Preview Page](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/f94e8a32-2525-4971-88fd-8f043b54b040)
-
+![Preview Page](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/cc6c77ca-7be3-438c-bfe7-088b65ef7e59)
 
 ##File_Downloaded: 
+ ![File_Downloaded](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/0700f082-d8cf-46f9-9b3d-d906f03082d9)
 
-![File_Downloaded](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/PdfResumeFinal.png)
- 
 ## AboutUs: 
-
-![AboutUs](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/79860fda-7e70-4c84-8734-4d02ce1ffdb0)
+ ![AboutUs](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/a0aedebb-ce0f-410c-9380-a7ff1d518177)
 
 
 
@@ -175,6 +178,7 @@ This project includes voice command integration using [Alan AI](https://alan.app
  
  # Team Members:-
  - Completed Individually
+
 
 
 
