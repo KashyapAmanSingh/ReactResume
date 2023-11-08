@@ -27,9 +27,11 @@ git clone https://github.com/KashyapAmanSingh/ReactResume.git
 - Tech Stack Used:-
 - - React Vite
 - - dom of React-router
-- - Hook-React Form
+- - React Hook Form
 - - Redux @emotion/styled @mui/icons-material @reduxjs/toolkit @emotion/react
-- - HTML2PDF.js, Bootstrap, JSP, JSP-HTML2Canvas
+- - HTML2PDF.js, JSP
+- - Bootstrap
+- - Alan AI
 - [Voice Command Integration](#voice-command-integration)
  
 Start the application by typing npm start in your terminal after the installation is complete.
@@ -44,14 +46,15 @@ This project includes voice command integration using [Alan AI](https://alan.app
 1. Ensure that your microphone is enabled and accessible in your web browser.
 2. Click on the microphone icon (Mic) button to activate voice command recognition.
 3. Wait for the listening indicator to appear and start speaking voice commands.
-4. The application will respond to recognized voice commands and perform corresponding actions that is primary related ot navigation on different pages.
+4. The application will respond to recognized voice commands and perform corresponding actions that is primary related ot navigation on different pages. By these commands or realtd to this setHome,setAbout,Previous Page,Next page
   
 
 
 
 # Code Tree Structure
 
-``` ├───public
+```  
+    ├───public
     └───src
     │   App.css
     │   App.jsx
@@ -149,7 +152,6 @@ This project includes voice command integration using [Alan AI](https://alan.app
             Slice.jsx
             Store.jsx
 
-   
 ```
 
 # Components and Pages of Application:
@@ -185,7 +187,7 @@ This project includes voice command integration using [Alan AI](https://alan.app
 
 
 #Project Access Links :
-- Deployment link: https://react-resume-6dil-kkzvibtdt-kashyapamansingh.vercel.app/
+- Deployment link: https://react-resume-phi.vercel.app/
 - YouTube link:https://www.youtube.com/watch
  
  # Team Members:-
