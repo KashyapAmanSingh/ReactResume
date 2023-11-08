@@ -138,6 +138,11 @@ This project includes voice command integration using [Alan AI](https://alan.app
 ```
 
 # Components and Pages of Application:
+
+
+
+  
+# Components and Pages of Application:
  
 ## Template Selection:
 -This feature allows users to select the template that they want. 
@@ -175,6 +180,7 @@ This project includes voice command integration using [Alan AI](https://alan.app
  
  # Team Members:-
  - Completed Individually
+
 
 
 
