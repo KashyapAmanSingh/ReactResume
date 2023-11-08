@@ -52,7 +52,8 @@ This project includes voice command integration using [Alan AI](https://alan.app
 
 # Code Tree Structure
 
-```  └───src
+```
+    └───src
     │   App.jsx
     │   index.css
     │   main.jsx
@@ -143,8 +144,7 @@ This project includes voice command integration using [Alan AI](https://alan.app
  
 ## Template Selection:
 -This feature allows users to select the template that they want. 
-
-![Home](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/e7fe623d-7162-488b-b40d-4c3916ea52b4)
+ ![Home](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/3c1a5eea-fd3e-4562-ae34-fe28fbd17e1d)
 
 
 ## sideBar: 
