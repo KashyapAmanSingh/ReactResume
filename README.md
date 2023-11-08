@@ -1,5 +1,4 @@
-
-
+ 
 # Resume-Builder
 
 Presenting Vite was used to create Resume Builder, a dynamic React application renowned for its efficiency and optimization. Using this potent tool, you can easily design your professional identity and make resumes that stand out like never before.
@@ -53,10 +52,7 @@ This project includes voice command integration using [Alan AI](https://alan.app
 
 # Code Tree Structure
 
-```  
-    ├───public
-    └───src
-    │   App.css
+```  └───src
     │   App.jsx
     │   index.css
     │   main.jsx
@@ -77,12 +73,8 @@ This project includes voice command integration using [Alan AI](https://alan.app
     │           ThirdResume.png
     │
     ├───Component
-    │   │   NavBar.jsx
-    │   │
     │   ├───Component
-    │   │       btnbtn.jsx
     │   │       MainSideBar.jsx
-    │   │       NvOff.jsx
     │   │
     │   ├───DetailForm
     │   │       ResumeDetail.jsx
@@ -99,7 +91,6 @@ This project includes voice command integration using [Alan AI](https://alan.app
     │   ├───Pdf File
     │   │       PdfGenerat.jsx
     │   │
-    │   ├───PdfGenerator
     │   ├───Templates
     │   │   ├───template1
     │   │   │       resumeTemplate1.jsx
@@ -139,50 +130,47 @@ This project includes voice command integration using [Alan AI](https://alan.app
     │   │   NotFound.jsx
     │   │   Preview.jsx
     │   │
-    │   ├───Home
-    │   │       Home.jsx
-    │   │
-    │   ├───template1
-    │   │       resumeTemplate1.jsx
-    │   │
-    │   └───template2
-    │           resumeTemplate2.jsx
+    │   └───Home
+    │           Home.jsx
     │
     └───redux
             Slice.jsx
             Store.jsx
-
+ 
 ```
 
 # Components and Pages of Application:
  
 ## Template Selection:
 -This feature allows users to select the template that they want. 
-![mainHome](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/4e5300a3-8a6a-4a13-bcb9-48e04aada93b)
 
-## sideBarr: 
+![Home](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/e7fe623d-7162-488b-b40d-4c3916ea52b4)
+
+
+## sideBar: 
 - This section allows users to Navigate 
-  ![Side Bar](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/94990d51-dcb1-49da-a3df-103c887de470)
+![Side Bar](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/53b921b8-d156-4c79-aec8-601d4c1dc847)
+
+ 
 
 ## Information Entry Page: 
 - This section allows users to enter their qualifications, employment history, education, and personal data.
-  ![Information Entry](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/9741edfe-2757-4cdb-9782-25def261f44a)
-
+![Information Entry](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/d9bd442f-14b5-4a86-9cc2-98033d3d904b)
 
 
 ## Preview Page: 
 - Users can view their completed resume in its final format in this component. After completing all the required information, they can download the resume in PDF format by clicking the "Generate Pdf" button.
-![Preview Page](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/f94e8a32-2525-4971-88fd-8f043b54b040)
+![Preview Page](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/a355fbf3-93cf-41ce-b0d6-df0c1443b19e)
+
 
 
 ##File_Downloaded: 
+ ![File_Downloaded](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/8fd13b81-696a-4623-bd10-a59a98852311)
 
-![File_Downloaded](https://github.com/KashyapAmanSingh/ReactResume.git/src/assets/image/PdfResumeFinal.png)
- 
 ## AboutUs: 
+![AboutUs](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/547b8d39-04bb-4319-b69c-c0fff93241df)
 
-![AboutUs](https://github.com/KashyapAmanSingh/ReactResume/assets/119684617/79860fda-7e70-4c84-8734-4d02ce1ffdb0)
-
+ 
 
 
 
