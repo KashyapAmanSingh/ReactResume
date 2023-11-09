@@ -14,8 +14,7 @@ const  Preview = () => {
 
   const [searchParams] = useSearchParams();
   const location = useLocation()
-  console.log(location.pathname);
-
+ 
    const templateNumber = searchParams.get('template');
      // Define a mapping of template numbers to their respective components
    const templates = {
@@ -28,15 +27,18 @@ const  Preview = () => {
   // Select the template component based on the template number from the URL
    const TemplateComponent = templates[templateNumber] || null;
 
- return (
-  <div>
-    
-    
- 
-   {TemplateComponent}
-  
-  </div>
-);
+    return (
+    <div>
+      {location.pathname === "/DetailFill/Preview" && searchParams.get('template') === null ? (  
+        <>
+          <h1 className=' fw-bold fs-1  mx-5 text-center '>First <span className='text-info'>Select</span> the Template & fill respective <span className='text-info'> Details</span></h1>
+          <NotFound/>
+        </>
+      ) : (
+        TemplateComponent
+      )}
+    </div>
+  );
 
 };
 
